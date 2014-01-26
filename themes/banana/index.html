@@ -1,0 +1,66 @@
+<!-- tiny amount of CSS to make links not underlined -->
+<style type="text/css">
+<!--
+a { color:#000000; text-decoration: none}
+-->
+</style>
+
+<html>
+
+<head>
+	<%templ tag(head) %>
+  <title><%templ tag(site_title) %></title>
+</head>
+
+<body bgcolor=#36648b text=#dcdcdc link=#000000 vlink=#000000 alink=#000000>
+
+<table border=0 cellspacing=0 cellpadding=2 width=80% align=center>
+
+<tr>
+  
+  <td width=100%>
+   <!-- heading -->
+   <font color=#ffd700 face=lucida><h1><center><b><%templ tag(site_title2) %></b></font>
+  </td>
+
+</tr>
+
+<tr>
+
+  <td width=100% bgcolor=#000000>
+
+    <table border=0 cellspacing=0 cellpadding=0 width=100%>
+      <tr>
+ 
+	<%templ tag(box_index) %>
+
+      </tr>
+
+    </table>
+
+  </td>
+
+</tr>
+
+<tr>
+	<td align="right"><%templ tag(login_heading) %></td>
+</tr>
+
+<tr>
+
+  <td width=100% bgcolor=#33648b><font face=lucida><br>
+
+	<%templ tag(site_location) %>
+	<BR><BR>
+	<%templ tag(content) %>
+	<BR>
+  </td>
+
+</tr>
+ 
+</table>
+
+<center><small><%templ tag(site_footer) %></small></center>
+</body>
+
+</html>

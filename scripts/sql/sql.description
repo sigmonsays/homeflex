@@ -1,0 +1,6 @@
+cotd.sql:command of the day
+levels.sql:access level descriptions (you need this)
+mimetypes.sql:mime types
+sections.sql:sections
+services.sql:services
+skins.sql:skins

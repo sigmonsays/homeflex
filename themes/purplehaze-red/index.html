@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+	<%templ tag(head) %>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <meta name="author" content="Haran" />
+
+    <title><%templ tag(site_title) %></title>
+  </head>
+
+  <body>
+    <div id="top"></div>
+  
+    <!-- ###### Header ###### -->
+
+    <div id="header">
+      <span class="headerTitle"><%templ tag(site_title2) %></span>
+      <div class="headerLinks">
+		<%templ tag(login_heading) %>
+      </div>
+    </div>
+
+    <!-- ###### Side Boxes ###### -->
+
+    <div class="sideBox LHS">
+	<div>Index</div>
+	<%templ tag(box_index) %>	
+	<P>
+    </div>
+
+    <div class="sideBox RHS">
+      <div>Links</div>
+      <span>
+	<%templ tag(box_links) %>
+      </span>
+    </div>
+
+    <!-- ###### Body Text ###### -->
+
+    <div id="bodyText">
+	<%templ tag(content) %>
+	<P>
+    </div>
+    
+    <!-- ###### Footer ###### -->
+
+    <div><div id="footer">  <!-- NB: outer <div> required for correct rendering in IE -->
+	<%templ tag(site_footer) %>
+      <div>
+		<center><%templ tag(site_location) %></center>
+      </div>
+
+      <div>
+        <span align="center" class="footerCol2"><center><%templ tag(current_date) %></center></span>
+      </div>
+    </div>
+      <center><a class="topOfPage" href="#top" title="Go to top of page">top</a></center>
+</div>
+  </body>
+</html>

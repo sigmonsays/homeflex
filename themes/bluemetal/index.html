@@ -1,0 +1,129 @@
+<html><head>
+	<%templ tag(head) %>
+	<title><%templ tag(site_title) %></title>
+
+
+<script language="JavaScript">
+// Manager Logon
+function document_onkeyup() {
+	pKeyCode = event.keyCode;
+	pAlt = event.altKey;
+	pCtrl = event.ctrlKey;
+	pShift = event.shiftKey;
+	if (pKeyCode == 55 && pAlt && pCtrl && !pShift) {
+		window.open("admin/","miniWindow","height=580,left=" + Math.ceil((window.screen.availWidth - 760)/2) + ",top=" + Math.ceil((window.screen.availHeight - 520)/2) + ",width=890,scrollbars=1,channelmode=0,directories=0,fullscreen=0,location=0,menubar=0,resizable=1,status=1,titlebar=1,toolbar=0",0);
+	}
+}
+
+document.onkeyup = document_onkeyup;
+
+//-->
+
+button_on = new Image(160,2)
+button_on.src = "/homeflex/themes/<%templ tag(siteTheme) %>/_files/button_on.gif"
+
+button_off = new Image(1,1)
+button_off.src = "/homeflex/themes/<%templ tag(siteTheme) %>/_files/spacer.gif"
+
+//hover
+						
+function hiLite(imgDocID, imgObjName, comment) {
+	document.images[imgDocID].src = eval(imgObjName + ".src");
+	window.status = comment; return true;
+}
+
+// --> 
+</script>
+<!-- base -->
+</head>
+<body marginheight="0" marginwidth="0" leftmargin="0" topmargin="0" bgcolor="#0e4370" onload="Javascript: window.status='<%templ tag(site_title2) %>';">
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="760">
+<tbody><tr>
+	<td><img border="0" width="760" height="122" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/logo.jpg"></td>
+</tr>
+</tbody></table><table align="center" border="0" cellpadding="0" cellspacing="0" width="760">
+<tbody><tr>
+	<td width="50"><img border="0" width="50" height="36" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/hmenu_left.jpg"></td>
+	<td width="663" background="/homeflex/themes/<%templ tag(siteTheme) %>/_files/hmenu_tile.gif" align="left" valign="middle">
+	
+	<img border="0" width="1" height="1" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/button_on.gif">
+		<DIV CLASS="siteLocation"><%templ tag(site_location) %></DIV>
+	
+	</td>
+	<td width="47"><img border="0" width="47" height="36" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/hmenu_right.jpg"></td>
+</tr>
+</tbody></table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="760">
+	<tbody><tr>
+		<td><img border="0" width="760" height="10" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/ptop.gif"></td>
+	</tr>
+</tbody></table>
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="760">
+<tbody><tr>
+	
+	<td valign="top" width="7" background="/homeflex/themes/<%templ tag(siteTheme) %>/_files/b_tile.gif"><img border="0" width="7" height="29" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/b_bit.gif"></td>
+
+
+	<td background="/homeflex/themes/<%templ tag(siteTheme) %>/_files/m_tile.gif" valign="top" align="right" width="160">
+<img border="0" width="160" height="29" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/m_bit.gif"><br>
+<img border="0" width="160" height="19" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/shards.jpg">
+
+<table border="0" width="100%" cellpadding="1" cellspacing="1">
+<tbody>
+<%templ tag(box_index) %>
+<tr>
+	<td align="right" height="13"><img border="0" width="1" height="13" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/spacer.gif"></td>
+</tr>
+
+</tbody></table>
+
+<img border="0" width="160" height="19" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/info.jpg">
+
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+<tbody>
+	<%templ tag(box_links) %>
+<tr>
+	<td align="right" height="13"><img border="0" width="1" height="13" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/spacer.gif"></td>
+</tr>
+</tbody></table><br><img border="0" width="1" height="2" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/spacer.gif"><br>
+	</td>
+	
+	<td valign="top" align="center" colspan="2" background="/homeflex/themes/<%templ tag(siteTheme) %>/_files/mainbg.gif" bgcolor="#ffffff">	
+	
+	<table width="600" height="600" border="0" cellpadding="0" cellspacing="0">
+	<tbody><tr>
+		<td valign="top">
+		<table width="593" height="100%" class="contentbox" border="0" valign="middle" cellspacing="1" cellpadding="10">
+			<tbody><tr>
+				<td valign="top">
+				<table border="0" cellpadding="0" cellspacing="0" width="100%" height="50">
+					<tbody><tr>
+						<td align="right" class="logged" height="49"><%templ tag(login_heading) %></td>
+					</tr>
+					<tr><td height="1"><hr noshade="noshade" color="#CCCCCC" size="1" width="100%"></td></tr>
+				</tbody></table>
+
+			<%templ tag(content) %>
+		</td>
+		</tr>
+		</tbody></table>
+
+		</td>
+	<td width="7" background="/homeflex/themes/<%templ tag(siteTheme) %>/_files/b_rbit.gif" valign="bottom"><img border="0" width="7" height="6" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/b_ebit.gif"></td>
+	</tr>
+	</tbody></table>
+	</td>
+<td valign="top" width="7"><img border="0" width="7" height="1" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/spacer.gif"></td>
+</tr>
+<tr>
+<td><img border="0" width="7" height="51" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/bot_A.gif"></td>
+<td><img border="0" width="160" height="51" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/bot_B.gif"></td>
+<td colspan="2"><img border="0" width="600" height="51" src="/homeflex/themes/<%templ tag(siteTheme) %>/_files/bot_C.gif"></td>
+<td></td>
+
+</tr>
+</tbody></table>
+ <br> 
+
+
+</body></html>

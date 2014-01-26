@@ -1,0 +1,153 @@
+<html>
+ <head>
+  <title><%templ tag(site_title) %></title>
+  <%templ tag(head) %>
+ </head>
+
+ <body>
+
+  <!-- body table -->
+  <table align="center" valign="top" border="0" cellpadding="8" cellspacing="0" width="95%">
+
+   <!-- top header -->
+   <tr>
+    <td valign="center" width="25%" colspan="2">
+     <!-- title table -->
+     <table align="center" bgcolor="#000000" border="0" cellpadding="1" cellspacing="0" width="100%" class="table">
+      <tr>
+       <td valign="center">
+        <table bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" width="100%" class="table">
+         <tr>
+          <td valign="middle" class="heading"><%templ tag(section_logo) %> <%templ tag(site_title2) %></td>
+	  <td valign="middle" align="right"><%templ tag(login_heading) %> &nbsp; </td>
+	 </tr>
+        </table>
+       </td>
+      </tr>
+     </table>
+     <!-- end title table -->
+    </td>
+   </tr>
+   <!-- end top header -->
+ 
+   <tr>
+    <!-- left column -->
+    <td valign="top" width="145">
+
+     <!-- sidebox -->
+     <table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" width="145" class="table">
+      <tr>
+       <td>
+        <table border="0" cellpadding="0" cellspacing="1" width="100%" class="table">
+         <tr>
+          <td bgcolor="#cccccc">&nbsp; <span class="title">Index</span></td>
+         </tr>
+         <tr>
+          <td bgcolor="#ffffff">
+
+		<%templ tag(box_index) %>
+
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+     </table>
+     <!-- end sidebox -->
+     <br />
+
+     <table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0" width="145" class="table">
+      <tr>
+       <td>
+        <table border="0" cellpadding="0" cellspacing="1" width="100%" class="table">
+         <tr>
+          <td bgcolor="#cccccc">&nbsp; <span class="title">Geeky Links</span></td>
+         </tr>
+         <tr>
+          <td bgcolor="#ffffff">
+
+		<%templ tag(box_links) %>
+
+          </td>
+         </tr>
+        </table>
+       </td>
+      </tr>
+     </table>
+     <!-- end sidebox -->
+     <br />
+
+
+    </td>
+
+
+    <!-- end left column -->
+
+    <!-- right column -->
+    <td valign="top" width="100%">
+     <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+       <td valign="top" width="100%">
+
+        <!-- story -->
+        <table align="center" bgcolor="#000000" border="0" cellPadding="0" cellSpacing="0" width="100%" class="table">
+	<tr><td bgcolor="#ffffff"><%templ tag(site_location) %></td></tr>
+         <tr>
+          <td>
+           <table border="0" cellpadding="8" cellspacing="1" width="100%" class="table">
+            <tr>
+             <td bgcolor="#ffffff">
+		<%templ tag(content) %>
+             </td>
+            </tr>
+           </table>
+          </td>
+         </tr>
+        </table>
+        <!-- end story -->
+
+        <br />
+        <!-- story -->
+        <table align="center" bgcolor="#000000" border="0" cellPadding="0" cellSpacing="0" width="100%" class="table">
+         <tr>
+          <td>
+           <table border="0" cellpadding="8" cellspacing="1" width="100%" class="table">
+            <tr>
+             <td bgcolor="#ffffff" colspan="2">
+              <p>
+               Content questions? <a href="mailto:<%templ tag(site_email) %>">press me</a>.
+               
+              </p>
+
+              <p>
+               Technical questions?
+               <a href="mailto:<%templ tag(site_email) %>">Touch me</a> gently.
+              </p>
+             </td>
+            </tr>
+           </table>
+          </td>
+         </tr>
+        </table>
+        <!-- end story -->
+
+       </td>
+      </tr>
+     </table>
+    </td>
+    <!-- end right column -->
+   </tr>
+
+   <tr>
+    <td align="middle" colspan="2">
+     <!-- footer -->
+	<%templ tag(site_footer) %>
+      </td>
+     </tr>
+     <!-- end footer -->
+    </td>
+   </tr>
+  </table>
+  <!-- end body table -->
+ </body>
+</html>

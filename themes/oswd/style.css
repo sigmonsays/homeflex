@@ -1,0 +1,160 @@
+<STYLE>
+tr.row1 {
+        background-color: #e5e3dc;
+}
+
+tr.row2 {
+        background-color: #fffae2;
+}
+
+td {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+a:link,a:active,a:visited {
+	font-family:			verdana,tahoma,arial;
+	font-size:				11px;
+	color:						#494115;
+}
+.secnavtext {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#cdc8a5;
+}
+.prinavtext {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+a.secnav:link,a.secnav:active,a.secnav:visited {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#cdc8a5;
+}
+a.prinav:link,a.prinav:active,a.prinav:visited {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+.date {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+a.loc:link,a.loc:active,a.loc:visited {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+.loctext {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+div.info-body {
+	font-family:			verdana,tahoma,arial;
+	font-size:				11px;
+	text-align:				justify;
+	color:						#494115;
+}
+.copytext {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+a.copyurl:link,a.copyurl:active,a.copyurl:visited {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+.newstitle {
+	font-family:			verdana,tahoma,arial;
+	font-size:				16px;
+	font-weight:			bold;
+	color:						#494115;
+}
+.newspd {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+div.newsbody {
+	font-family:			verdana,tahoma,arial;
+	line-height:			120%;
+	font-size:				11px;
+	text-align:				justify;
+	color:						#494115;
+}
+.sideheader {
+	font-family:			verdana,tahoma,arial;
+	font-size:				11px;
+	font-weight:			bold;
+	color:						#494115;
+}
+.label {
+	font-family:			verdana,tahoma,arial;
+	font-size:				11px;
+	font-weight:			bold;
+	color:						#494115;
+}
+.side1 {
+	font-family:			verdana,tahoma,arial;
+	font-size:				11px;
+	color:						#494115;
+}
+.side2 {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+a.side3:link,a.side3:active,a.side3:visited {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+.designname {
+	font-family:			verdana,tahoma,arial;
+	font-size:				18px;
+	font-weight:			bold;
+	color:						#494115;
+}
+.designauthdate {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+.designdesc {
+	font-family:			verdana,tahoma,arial;
+	line-height:			160%;
+	font-size:				11px;
+	color:						#494115;
+}
+.designlabels {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	font-weight:			bold;
+	color:						#494115;
+}
+.designvars {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#494115;
+}
+a.designlinks:link,a.designlinks:active,a.designlinks:visited {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	font-weight:			bold;
+	color:						#494115;
+}
+.side {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#cdc8a5;
+}
+a.sidelink:link,a.sidelink:active,a.sidelink:visited {
+	font-family:			verdana,tahoma,arial;
+	font-size:				10px;
+	color:						#cdc8a5;
+}
+</STYLE>

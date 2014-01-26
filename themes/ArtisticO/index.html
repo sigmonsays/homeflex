@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE><%templ tag(site_title) %></TITLE>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<META NAME="DESCRIPTION" CONTENT="Your Description">
+<META NAME="KEYWORDS" CONTENT="Your Keywords">
+<META NAME="AUTHOR" CONTENT="Your Name">
+<%templ tag(head) %>
+</HEAD>
+
+<BODY>
+
+	<TABLE WIDTH="900" BORDER="0" CELLSPACING="1" CELLPADDING="0" BGCOLOR="#000000" ALIGN="center">
+		<TR>
+			<TH COLSPAN="2"> 
+				<TABLE WIDTH="100%"BORDER="0" CELLSPACING="0" CELLPADDING="0">
+					<TR>
+						<TD CLASS="bg" HEIGHT="31" ALIGN="left"><FONT SIZE=4><B><%templ tag(site_title2) %></B></FONT></TD>
+						<TD CLASS="bg" WIDTH="224" HEIGHT="31" ALIGN="right">&nbsp;</TD>
+					</TR>
+				 </TABLE>
+			</TH>
+		</TR>
+
+		<TR>
+			<TD WIDTH="150" HEIGHT="20" CLASS="zoeken2" ALIGN="left" VALIGN="middle">
+			&nbsp;<A HREF="/login">Login</A>
+			</TD>
+			<TD CLASS="conarea" HEIGHT="20">
+				<TABLE CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BORDER="0">
+					<TBODY>
+						<TR>
+							<TD CLASS="nav1" ALIGN="left"><%templ tag(site_location) %></TD>
+							<TD CLASS="date" ALIGN="right"><%templ tag(current_date) %></TD>
+						</TR>
+					</TBODY>
+				 </TABLE>
+			</TD>
+		</TR>
+		<TR>
+			<TD VALIGN="top" WIDTH="150" BGCOLOR="#ffffff"><BR>
+				<TABLE CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BORDER="0">
+					<TBODY>
+						<TR>
+							<TD CLASS="mltop">Menu</TD>
+						</TR>
+						<TR>
+							<TD CLASS="ml">
+								<%templ tag(box_index) %>
+							</TD>
+						</TR>
+					</TBODY>
+				 </TABLE><BR>
+				<TABLE CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BORDER="0">
+					<TBODY>
+						<TR><TD CLASS="mltop">Links</TD></TR>
+						<TR><TD><%templ tag(box_links) %></TD></TR>
+					</TBODY>
+				 </TABLE><BR>
+
+			</TD>
+			<TD CLASS="content" VALIGN="top" WIDTH="760" align="left"><BR>
+				<%templ tag(content) %>
+				<BR><BR><BR>
+			</TD>
+		</TR>
+	</TBODY>
+</TABLE>
+<TABLE WIDTH="900" BORDER="0" CELLSPACING="1" CELLPADDING="0" ALIGN="center">
+	<TR>
+		<TD ALIGN="center" class="copyright"><%templ tag(site_footer) %></TD>
+	</TR>
+</TABLE>
+
+</BODY>
+</HTML>

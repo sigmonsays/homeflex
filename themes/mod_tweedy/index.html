@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+	<%templ tag(head) %>
+	<title><%templ tag(site_title) %></title>
+
+</head>
+
+<body bgcolor="#ffffff">
+
+
+<!-- header -->
+<table width="100%" border="0" cellspacing="0" cellpadding="0" class="navOutline">
+<tr>
+	<td>
+		<table width="100%" border="0" cellspacing="1" cellpadding="0">
+		<tr class="content">
+			<td class="leftNavTitle" valign=middle><%templ tag(section_logo) %></td>
+			<td width="90%" class="rightNavTitle">
+				&nbsp;<b><%templ tag(site_title2) %></b>
+			</td>
+			<td align="right" width="10%" nowrap>
+				<%templ tag(current_date) %>
+				&nbsp;
+			</td>
+		</tr>
+		<tr>
+			<td class="navBarColor" colspan=2>
+				&nbsp;
+				<a href="/index" class="highlightNav">&lt;&nbsp;index&nbsp;&gt;</a>
+				<%templ tag(box_links) %>
+			</td>
+			<td class="navBarColor" nowrap>
+			&nbsp;
+				<%templ tag(login_heading) %>
+			</td>
+		</tr>
+		</table>
+	</td>
+</tr>
+</table>
+<!-- end header -->
+<br>
+<table width="100%" border=0 cellspacing=0 cellpadding=5>
+	<tr>
+		<td width="75%" valign="top">
+
+		<!-- quote table -->
+		
+		<table width="100%" border="0" cellspacing="0" cellpadding="0" class="outline">
+		<tr>
+			<td>
+				<table width="100%" border="0" cellspacing="1" cellpadding="3">
+				<tr>
+					<td class="leftTitle2" nowrap><%templ tag(site_location) %></td>
+					<td align="right" width="100%" class="rightTitle">
+						<span class="rightTitle">
+							<%templ tag(current_date) %>
+						</span>
+					</td>
+				</tr>
+				<tr class="content">
+					<td colspan="2"> 
+						<%templ tag(content) %>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+		<!-- end quote table -->
+		
+		<br>
+
+		</td>
+		<td width="25%" valign="top" rowspan="1">
+			<!-- home table -->
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="outline">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="1" cellpadding="3">
+					<tr>
+						<td class="leftTitle" nowrap>
+						H o m e . L i n k s		&nbsp;&nbsp;
+						</td>
+						<td align="right" width="100%" class="rightTitle">
+							<span class="rightTitle">&nbsp;</span>
+						</td>
+					</tr>
+					<tr class="content">
+						<td colspan="2">
+							<%templ tag(box_index) %>
+						</td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			</table>
+			<!-- end home table -->
+
+			<br>
+			<table width="100%" border="0" cellspacing="0" cellpadding="0" class="outline">
+			<tr>
+				<td>
+					<table width="100%" border="0" cellspacing="1" cellpadding="3">
+					<tr>
+						<td class="leftTitle" nowrap>
+						H o m e . A n n o u n c e m e n t s	&nbsp;&nbsp;
+						</td>
+						<td align="right" width="100%" class="rightTitle">
+							<span class="rightTitle">&nbsp;</span>
+						</td>
+					</tr>
+					<tr class="content">
+						<td colspan="2">
+							<%templ tag(box_announcements) %>
+						</td>
+					</tr>
+					</table>
+				</td>
+			</tr>
+			</table>
+
+
+		</td>
+	</tr>
+</table>
+
+<br><br><br>
+
+<div align="center" style="border: 1px solid black; background-color: #dfdfdf; margin: 1em; padding: 0.3em;">
+	<%templ tag(site_footer) %>
+</div>
+<br><br>
+
+</div>
+</body>
+</html>

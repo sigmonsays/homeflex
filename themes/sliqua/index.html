@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<title><%templ tag(site_title) %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<%templ tag(head) %>
+</head>
+
+<body>
+<br />
+<table border="0" cellspacing="0" cellpadding="0" width="100%">
+  <tr> 
+    <td colspan="3" class="pos1" height="55" valign="middle"> 
+      <div class="topbox"><h2><%templ tag(site_title2) %></h2></div>
+    </td>
+  </tr>
+  <tr> 
+  <td>
+   <table width="100%" border="0" cellpadding="0" cellspacing="0" class="topnav">
+    <tr>
+  	      <td align="left" class="head"><%templ tag(site_location) %></td>
+    	  <td align="right"><%templ tag(login_heading) %></td>
+	</tr>
+   </table>
+   </td>
+  </tr>
+  <tr> 
+    <td> 
+      <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td valign="top" width="150"> <br />
+		<table width="100%" style="border: 1px solid black;" cellspacing=0>
+		<tr><td class="headbox">Index</td></tr>
+		<tr><td><%templ tag(box_index) %></td></tr>
+		</table>
+            </div>
+          </td>
+          <td valign="top"> <br />
+            <table border="0" cellspacing="0" cellpadding="0" width="100%">
+              <tr> 
+                <td width="10">&nbsp;</td>
+                <td valign="top" class="mainbox"><%templ tag(content) %></td>
+
+                <td width="10">&nbsp;</td>
+                <td width="145" valign="top">
+		<table width="100%" style="border: 1px solid black;" cellspacing=0>
+		<tr><td class="headbox">Links</td></tr>
+		<tr><td><%templ tag(box_links) %></td>
+		</td></tr>
+		</table>
+              </tr>
+            </table>
+			<br>
+          </td>
+        </tr>
+      </table>
+	<br><!-- force space between links box and/or index box .. (stupid html =) -->
+    </td>
+  </tr>	
+
+  <tr class="pos1"> 
+    <td height="20" colspan="2" class="head" align="right"><%templ tag(site_footer) %></td>
+  </tr>
+</table>
+</body>
+</html>

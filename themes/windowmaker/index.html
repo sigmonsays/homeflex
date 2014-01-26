@@ -1,0 +1,654 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%templ tag(head) %>
+<title><%templ tag(site_title) %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+body           {margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; font-family: Helvetica, Arial, Verdana; background-color: #216383}
+.logo          {font-family: Helvetica, Arial, Verdana; font-size: 48px; font-weight: bold; color: #000000; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px}
+.border {border-color: black #174357; border-style: solid; border-top-width: 0px; border-right-width: 1px; border-bottom-width: 0px; border-left-width: 1px}
+.dots          {font-family: Helvetica, Arial, Verdana; font-size: 14px; font-weight: bold; color: #CC6600}
+.close         {font-family: Helvetica, Arial, Verdana; font-size: 22px; font-weight: bold; color: #1C526C}
+.text          {font-family: Helvetica, Arial, Verdana; font-size: 12px; color: #FFFFFF}
+
+td.dark   {background-color: #CC6600}
+td.medium {background-color: #FB7D00}
+td.light  {background-color: #FF9224}
+
+td.bluedark   {background-color: #1C526C}
+td.bluemedium {background-color: #216383}
+td.bluelight  {background-color: #297BA3}
+
+.dock1 {position: absolute; left: 1px; top: 1px}
+.dock2 {position: absolute; left: 87px; top: 1px}
+.dock3 {position: absolute; left: 173px; top: 1px}
+.dock4 {position: absolute; left: 259px; top: 1px}
+.dock5 {position: absolute; left: 345px; top: 1px}
+.dock6 {position: absolute; left: 1px; top: 85px}
+.dock7 {position: absolute; left: 87px; top: 85px}
+.dock8 {position: absolute; left: 1px; top: 169px}
+.dock9 {position: absolute; left: 1px; top: 253px}
+.dock0 {position: absolute; left: 107px; top: 207px}
+
+.window {position: absolute; left: 225px; top: 125px}
+.moving {position: absolute; left: 87px; top: 169px; border: 2px #1D5570 dotted}
+
+a.dock:visited {font-family: Helvetica, Arial, Verdana; font-size: 35px; font-weight: bold; color: #CC6600 ; text-decoration: none; text-align: center}
+a.dock:link { font-family: Helvetica, Arial, Verdana; font-size: 35px; font-weight: bold; color: #CC6600 ; text-decoration: none; text-align: center }
+
+-->
+</style>
+</head>
+
+<body>
+<table class="dock1" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                      <td class="dots" height="75">
+                        <div align="center"><A HREF="/chat">Chat</A></div>
+                        <br>
+                          ...
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="dock2" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                                            <td class="dots" height="75">
+                        <div align="center"><A HREF="/contact">Contact</A></div>
+                        <br>
+                          ...
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="dock3" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                                            <td class="dots" height="75">
+                        <div align="center"><A HREF="/pictures">Pictures</A></div>
+                        <br>
+                          ...
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="dock4" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                                            <td class="dots" height="75">
+                        <div align="center"><A HREF="/projects">Projects</A></div>
+                        <br>
+                          ...
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="dock5" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                                            <td class="dots" height="75">
+                        <div align="center"><%templ tag(current_date) %></div>
+                        <br>
+                          ...
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="window" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td height="15" width="35"> 
+            <table cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="35">
+              <tr> 
+                <td> 
+                  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr> 
+                      <td colspan="2" height="2" class="bluelight"></td>
+                      <td rowspan="2" width="2" class="bluedark"> </td>
+                    </tr>
+                    <tr> 
+                      <td width="2" class="bluelight"> </td>
+                      <td> 
+                        <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                          <tr> 
+                            <td class="bluemedium"> 
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr valign="middle" align="center"> 
+                                  <td class="close" height="15"> 
+                                    <table width="100%" border="0" cellspacing="4" cellpadding="3">
+                                      <tr bgcolor="#1C526C"> 
+                                        <td> 
+                                          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tr bgcolor="#216383"> 
+                                              <td height="13"></td>
+                                            </tr>
+                                          </table>
+                                        </td>
+                                      </tr>
+                                    </table>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td colspan="3" height="2" class="bluedark"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td height="15" width="450"> 
+            <table cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="450">
+              <tr> 
+                <td> 
+                  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr> 
+                      <td colspan="2" height="2" class="bluelight"></td>
+                      <td rowspan="2" width="2" class="bluedark"> </td>
+                    </tr>
+                    <tr> 
+                      <td width="2" class="bluelight"> </td>
+                      <td> 
+                        <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                          <tr> 
+                            <td class="bluemedium"> 
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr valign="middle" align="center"> 
+                                  <td class="close" height="15"><%templ tag(site_title2) %></td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td colspan="3" height="2" class="bluedark"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td height="15" width="35"> 
+            <table cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="35">
+              <tr> 
+                <td> 
+                  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr> 
+                      <td colspan="2" height="2" class="bluelight"></td>
+                      <td rowspan="2" width="2" class="bluedark"> </td>
+                    </tr>
+                    <tr> 
+                      <td width="2" class="bluelight"> </td>
+                      <td> 
+                        <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                          <tr> 
+                            <td class="bluemedium"> 
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr valign="middle" align="center"> 
+                                  <td class="close" height="15">X</td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td colspan="3" height="2" class="bluedark"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <table width="520" border="0" cellspacing="0" cellpadding="35">
+        <tr bgcolor="#1E5875"> 
+          <td class="border"><span class="text"><%templ tag(content) %></span></td>
+        </tr>
+      </table>
+      <table border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td width="35"> 
+            <table cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="35">
+              <tr> 
+                <td> 
+                  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr> 
+                      <td colspan="2" height="2" class="bluelight"></td>
+                      <td rowspan="2" width="2" class="bluedark"> </td>
+                    </tr>
+                    <tr> 
+                      <td width="2" class="bluelight"> </td>
+                      <td> 
+                        <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                          <tr> 
+                            <td class="bluemedium"> 
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr valign="middle" align="center"> 
+                                  <td></td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td colspan="3" height="2" class="bluedark"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="450"> 
+            <table cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="450">
+              <tr> 
+                <td> 
+                  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr> 
+                      <td colspan="2" height="2" class="bluelight"></td>
+                      <td rowspan="2" width="2" class="bluedark"> </td>
+                    </tr>
+                    <tr> 
+                      <td width="2" class="bluelight"> </td>
+                      <td> 
+                        <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                          <tr> 
+                            <td class="bluemedium"> 
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr valign="middle" align="center"> 
+                                  <td></td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td colspan="3" height="2" class="bluedark"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td width="35"> 
+            <table cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="35">
+              <tr> 
+                <td> 
+                  <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                    <tr> 
+                      <td colspan="2" height="2" class="bluelight"></td>
+                      <td rowspan="2" width="2" class="bluedark"> </td>
+                    </tr>
+                    <tr> 
+                      <td width="2" class="bluelight"> </td>
+                      <td> 
+                        <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                          <tr> 
+                            <td class="bluemedium"> 
+                              <table cellspacing="0" cellpadding="0" border="0" width="100%">
+                                <tr valign="middle" align="center"> 
+                                  <td></td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr> 
+                      <td colspan="3" height="2" class="bluedark"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <br>
+      <br>
+      <br>
+    </td>
+  </tr>
+</table>
+<br>
+<table class="moving" width="85" border="0" cellspacing="0" cellpadding="0">
+  <tr bgcolor="#205F7D"> 
+    <td height="79">&nbsp;</td>
+  </tr>
+</table>
+<table class="dock6" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                                            <td class="dots" height="75">
+                        <div align="center"><A HREF="/upload">Upload</A></div>
+                        <br>
+                          ...
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="dock7" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                                            <td class="dots" height="75">
+                        <div align="center"><A HREF="/movies">Movies</A></div>
+                        <br>
+                          ...
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="dock8" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                                           <td class="dots" height="75">
+                        <div align="center" class="dock"><A HREF="/">News</A></div>
+                        <br>
+                          ...
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="dock9" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                                            <td class="dots" height="75" valign="top">
+                        <div align="center" valign="top"><BR><A HREF="/index">Index</A></div>
+                        <br>
+                          ...
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<table class="dock0" cellspacing="0" cellpadding="1" border="0" bgcolor="#000000" width="85">
+  <tr> 
+    <td> 
+      <table cellspacing="0" cellpadding="0" border="0" width="100%">
+        <tr> 
+          <td colspan="2" height="2" class="light"></td>
+          <td rowspan="2" width="2" class="dark"><br>
+          </td>
+        </tr>
+        <tr> 
+          <td width="2" class="light"><br>
+          </td>
+          <td> 
+            <table cellspacing="0" cellpadding="1" border="0" width="100%">
+              <tr> 
+                <td class="medium"> 
+                  <table cellspacing="0" cellpadding="1" border="0" width="100%">
+                    <tr valign="bottom"> 
+                                            <td class="dots" height="75">
+                          <%templ tag(box_login) %>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr> 
+          <td colspan="3" height="2" class="dark"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</body>
+</html>
+

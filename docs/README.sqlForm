@@ -1,0 +1,359 @@
+/*********************************************************************************************************************/
+
+Here are the functions available in each class.
+sqlForm extends formInput, so if you're looking for just input field functionality there is 
+no need to use sqlForm.
+
+You shouldn't have to escape any charecters for use with these functions. All the
+escaping should be done automatically. This is functional with PHP 4.2.3 and magic_quotes_gpc
+turned on. (Default settings with register_globals On).
+
+See the below example for implementation and more information
+
+	// Basic form creation
+	$form = new sqlForm($dbi, $table, $database);
+
+
+
+formInput.class.inc
+		function start($target, $enctype = "", $method = "POST");
+			starts the form
+
+		function end()
+			ends the form
+
+		function select($name, $selections = array(), $selected = "")
+			create a select box
+			- $name 	name of the select box
+		function searchForm($displayFieldsList) {
+		function searchFormSubmit($displayFieldsList) {
+			- $selections	available selections
+				NOTE: when checking for the current select, the numerical id of $selected is first 
+				checked, then the actual value of $selectections[$selected] is checked.
+
+		function hidden($name, $value) 
+			create a hidden input field with name $name and value $value
+
+		function password($name) 
+			create a password box with $name
+
+		function radio($name, $value = "", $checked = 0) 
+			create a radio box, sqlForm does NOT maintain relation for radio boxes. What this means is
+			that the name is the only relation available. The web browser should adequately deal with
+			this, but be warned.
+
+		function submit($value = "Submit") 
+			submit button, text says "Submit" or specified
+
+		function boolean($name, $yesno = 1) 
+			Creates two radio options, yes and no, boolean value, true or false.
+
+		function checkbox($name, $value = "", $checked = 0) 
+			creates a check box, checked 1, unchecked 0
+
+		function file($name) 
+			input type file, when this is used in sqlForm, sqlForm takes two additional parameters, the first is
+			where store the file being uploaded, and the second the relative url on how to reach the uploaded file.
+			Just the file name is stored.
+
+		function text($name, $value = "", $size = 0, $extra = "") 
+			text box with $value that's $size in length. If $size is ommited, then no size is entered and 
+			it falls back to browser default. $extra is any other extra html needed in the text box. (such
+			as STYLE tags, etc)
+
+		function textarea($name, $rows = 10, $cols = 10, $value = "") 
+			text area box called $name that's $rows by $cols big containing $value.
+
+		function date($name, $format, $value = 0, $timestamp_format = "epoch") {
+			create a date input field, Format is the format used by the PHP date() function unless 'sql-timestamp' is passed, then
+			the value used is suitable for mysql timestamp type field.
+
+			Almost every value for format in the PHP date(..) function is supported. You can also embed html in the format string to allow breaks and what not.
+			
+			$value varies depending on the $timestamp_format used.
+
+			Available $value settings
+			-------------------------------------------------------------------------
+			epoch							Epoch timestamp format
+			sql-timestamp				mySql timestamp format
+			date							YYYY-MM-DD format (mysql again)
+
+			It is quite easy to add more but this worked for me. Patches are always welcome.
+
+		function fileList($name, $directory, $selected_file = "", $max_files = 0)
+			create a select box containing a list of files from a directory $directory. $directory must be readable by the web server. Optioninally include
+			$selected_file to make it the currently selected file. Optionally include $max_files to stop listing after $max_files. Zero is infinite.
+
+sqlForm.class.inc
+		General notes:
+			$displayFieldsList is a comma seperated list of field name (relational to the database), They are only applicable to
+			the certain form (add and edit form). Each form has a different set.
+
+
+		function sqlForm($dbi, $table, $database) 
+			Internally used
+			Constructor class, only use if your l33t. See EXAMPLE
+
+		function formInput($fieldName, $fieldValue = "") 
+			Internally used
+
+		function getFieldType($fieldName) 
+			Internally used
+			Returns the type of field given the field Name
+
+		function setFieldType($field, $type) 
+			Set's the field type 
+
+			Refer to the section below called "Field Types" for more information on particular fields and arguments available to each
+
+		function fieldIDFromName($name) 
+			Internally used 
+
+		function addForm($displayFieldsList) 
+			Create the add form
+			
+		function addFormSubmit($displayFieldsList) 
+			add form submit
+
+		function editForm($displayFieldsList, $id) 
+			edit form with entry $id
+
+		function editFormSubmit($displayFieldsList, $id) 
+			edit form submit
+
+		function deleteForm($id) 
+			delete with id $id
+
+		function displayForm($displayFieldsList, $start = -1, $offset = -1) 
+			list the form 
+
+		function searchForm($displayFieldsList)
+			search form function, fields to use/display
+
+		function searchFormSubmit($displayFieldsList)
+			search form function, fields to use/display
+
+		function viewRecord($displayFieldsList, $id, $mapField = NULL)
+			$this->actionVariable include, "view"
+			$displayFieldsList are a coma delim list of fields to display. $id is the $this->uniqueField value of the record to display
+			$mapField can be any field listed in $displayFieldsList, and the value of this field will be displayed as the title instead of $id
+
+
+		function fieldLinkify($id, $obj)
+			internally used, takes field $id and replaces all $ (dollar sign) variables with the member named in object $obj
+
+
+		function setFieldFunction($fieldName, $functionName, $type = 'user-defined', extra arguments)
+			set a function to pass the data of a field through.
+
+			Built-in functions		extra arguments
+			----------------------------------------------------------------------------------------
+			boolean				value (boolean), "Yes/No"
+			date				unix_timestamp, <php date() format string>
+			timestamp			mysql_timestamp, <php date() format string>
+
+			Implementing a custom function is basically the same as built-in, but you lose the dynamic argument
+			functionality. Refer to the example below on how to implement a custom function.
+
+			<?
+				$form = new sqlForm($dbi, $table, $database);
+				// .... additional code here ommited for brevity ....
+
+				function custom_func_hex($value) {
+					return "0x$value";
+				}
+				$form->setFieldFunction("fieldName", "custom_func_hex", "user-defined");
+
+				/*
+				 That's it!, now when you call $form->displayForm(...), the values returned from the field
+				fieldName, they will be passed to custom_func_hex() and updated. 
+
+				If the function doesn't exist, there will be no error, and the value will be un-altered.
+				*/
+			?>
+
+		function linkField($fieldName, $url)
+			creates a hyperilnk on the given field name, the url is simply a url containing variables ($var1, $var2). The variables
+			will be replaced with their given values at run-time.
+
+			Example:
+				say you have a table with fields id,subject,message. To link the subject (to pull up more info or sumthin), you could do something like this:
+
+				$form->linkField("subject", "$form->urlPrefix?$this->uniqueField=\$id&$this->actionVariable=view");
+
+
+		function formHandler($displayFields = -1, $addFields = -1, $editFields = -1, $searchFields = -1, $viewFields = -1)
+			convenience function
+
+			runs the necessary code to add,edit,delete,search,etc
+
+			if you dont' need any "trickery" in the form, there is no need to use the switch statement like in example #1. See example #2 for
+			a small example on how to use this funciton.
+
+			this function will return TRUE when the page needs to be reloaded, false otherwise. Such as after processing
+			the deleteForm(), addFormSubmit(), etc.
+
+		function selectSource($field_name, $table, $valueField, $dispField, $extra = "") {
+			this function basically generates an associative array of the fields in table, the array is field with keys from the field $valueField and the
+			value is set to $dispField. Extra is anything else you want appended to the qury (such as limit or where). 
+			This function makes it a littler nicer to generate a select box from another table. 
+
+			note that $field_name is also the name of the field.
+
+			ex:
+			$form->setFieldType("field", "select", $form->selectSource("field", "table2", "id", "name") );
+
+
+
+Other class variables that have influence in functionality.
+
+                var $urlPrefix; (string, default none)
+			url prefix, the prefix of the page you're using this class in
+
+                var $uniqueField; (string, default id)
+			unique field it table, defaults to id
+
+                var $sqlOrderBy; (order by string, default none)
+			how to sort
+			$sqlOrderBy = "ORDER BY type ASC";
+
+		var $sqlStart; (integer, default $start)
+			current position in records
+
+		var $sqlOffset; (integer, default 30)
+			how many records to display per page
+
+		var $sqlWhere; (sql where string, default none)
+			where clause for dislayForm()
+			$sqlWhere = "WHERE type='red'";
+
+		var $mode; (comma seperated list, default add,edit,delete,list)
+			comma seperated list of what can can be done.
+			use: add,edit,delete,list,search,view
+
+		var $urlVars; (string, default none)
+			variables that need to be passed to the add/edit/delete forms
+
+		var $actionVariable; (comma seperated list, default action)
+			variable to control add/edit/delete. See example.
+
+		var $cellpadding
+			horizontal and vertical spacing between each cell (cell padding)
+
+		var $rowColors
+			Default row colors ($FFFFFF,#e8e8e8)
+			comma seperated list of colors to alternate row colors
+
+		var $title;
+			Defaults to table name, otherwise change this to set the title of the forms. Every form will have some form of this title in it
+
+		var $variablePrefix;
+			defaults to 'sqlForm_', if you have 'register_globals off' set, then you could easily have variable name conflicts, the prefix is what
+			to prepend to the variable names to avoid this problem. You shouldn't have to change this unless you're positive you're running into
+			a variable name conflict.
+
+Field Types:
+	Below is the necessary (and sometimes optional) arguments for the sqlForm->setFieldType($field, $type, ... additional parameters ...) function.
+	The first two parameters are required. Everything else is optional and will be filled in with a *reasonable default*. All fields default
+	to a regular plain-text input box.
+
+	The first parameter, $field is the fieldName you are changing. and Type can be any of the following:
+
+		Field Type		Arguments						
+		------------------------------------------------------------------------------------
+		 select			($name, $selections = array(), $selected = "")
+		 hidden			($name, $value)
+		 password		($name, $password_type, $update_flag)
+
+		 $password_type can be either empty or "none" for no password type. "mysql" to pass it through the mysql PASSWORD(..) function
+		 $update_flag if set to TRUE means to update only if there is a password entered in the box, otherwise leave the field alone
+)
+		 radio			($name, $value = "", $checked = 0)
+		 submit			($value = "Submit")
+		 boolean		($name, $yesno = 1)
+		 checkbox		($name, $value = "", $checked = 0)
+		 file			($name)
+		 fileList		($name, $directory, $selected_file = "", $max_files)
+		 text			($name, $value = "", $size = 0, $extra = "")
+		 textarea		($name, $rows = 10, $cols = 10, $value = "")
+		 date			($name, $format, $value = 0, $timestamp_format = "epoch")
+	
+
+	for the meaning of the field type arguments refer to the formInput class above, as all the setFieldType(..) function arguments
+	correspond to the function extended from that class.
+
+EXAMPLE #1:
+<?
+	/*
+		Note that sqlForm and formInput are register global off safe... This example is not!
+	*/
+
+	require_once("class/formInput.class.inc");
+	require_once("class/sqlForm.class.inc");
+
+	$form = new sqlForm($dbi, $dbTables['cotd'], $database);
+	$form->urlPrefix = "$urlPrefix/admin/cotd";
+	$form->uniqueField = "day";
+	$form->sqlStart = $start;
+
+	$form->setFieldType("command", "textarea", 10, 40);
+	$form->setFieldType("description", "textarea", 10, 40);
+
+	switch ($action) {
+
+		case "add":
+			$form->addForm("command,description");
+			break;
+
+		case "addSubmit":
+			$form->addFormSubmit("command,description");
+			unset($action);
+			require("cat/$cat.cat.php");
+			break;
+
+		case "edit":
+			$form->editForm("command,description", $day);
+			break;
+
+		case "editSubmit":
+			$form->editFormSubmit("command,description", $day);
+			unset($action);
+			require("cat/$cat.cat.php");
+			break;
+
+		case "delete":
+			$form->deleteForm($day);
+			unset($action);
+			require("cat/$cat.cat.php");
+			break;
+
+		default:
+			$form->displayForm("description", intval($start), intval($offset));
+			break;
+	}
+?>
+
+
+EXAMPLE #2:
+<?
+   require_once("class/sqlForm.class.inc");
+
+   $form = new sqlForm($dbi, "changelog", $database);
+   $form->urlPrefix = "$urlPrefix/changelog";
+   $form->uniqueField = "id";
+
+   $form->setFieldType("subject", "text", 40);
+   $form->setFieldType("text", "textarea", 10, 40);
+   $form->sqlOrderBy = "ORDER BY `when` DESC";
+   $form->mode = "list,search,view";
+   $form->setFieldFunction("when", "timestamp", "built-in");
+
+   $form->linkField("subject", "$urlPrefix/changelog/?$form->uniqueField=\$id&$form->actionVariable=view");
+
+   if ($form->formHandler("id,when,subject", -1, -1, "id,when,subject")) {
+       require("cat/$cat.cat.php");
+   }
+
+	/* much simpler huh?  */
+?>
+

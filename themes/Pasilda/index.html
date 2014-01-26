@@ -1,0 +1,261 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+<%templ tag(head) %>
+<!-- Page Title -->
+<title><%templ tag(site_tile) %></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Style-Type" content="text/css">
+
+<style type="text/css">
+body {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ font-weight: normal;
+ margin: 0px;
+ padding: 0px;
+ background-color: #2d3851;
+}
+
+h1 {
+ font-family: Times New Roman, serif;
+ font-size: 26px;
+ font-weight: normal;
+ color: #e9f2fc;
+ }
+
+h2 {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ font-weight: bold;
+ color: #333333;
+ }
+
+p {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ font-weight: normal;
+ line-height: 18px;
+ color: #333333;
+ }
+
+a {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ font-weight: normal;
+ text-decoration: underline;
+ color: #0000f0;
+ }
+
+a:visited {
+ text-decoration: underline;
+ color: #000090;
+ }
+
+a.navlink {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 11px;
+ font-weight: normal;
+ text-decoration: none;
+ color: #e9f2fc;
+ }
+
+a.navlink:visited {
+ text-decoration: none;
+ color: #e9f2fc;
+ }
+
+a.newslink {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ line-height: 10px;
+ text-decoration: none;
+ color: #c00050;
+ }
+
+a.newslink:visited {
+ text-decoration: none;
+ color: #900020;
+ }
+
+a.newslink:hover {
+ text-decoration: underline;
+ }
+
+li {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 12px;
+ font-weight: normal;
+ line-height: 18px;
+ padding-bottom: 7px;
+ color: #333333;
+ }
+
+.navcell {
+ padding: 3px 7px 3px 7px;
+ }
+
+.newsheader {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ line-height: 10px;
+ padding-left: 5px;
+ color: #e9f2fc;
+ background-color: #ffffff;
+ background-color: #5f7797;
+ }
+
+.newscell {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ line-height: 10px;
+ padding-top: 7px;
+ padding-left: 5px;
+ padding-right: 5px;
+ padding-bottom: 9px;
+ color: #464c64;
+ background-color: #a7aeb8;
+ }
+
+.update {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ line-height: 14px;
+ color: #e9f2fc;
+ }
+
+.copyright {
+ font-family: Verdana, Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ font-weight: normal;
+ line-height: 10px;
+ color: #464c64;
+ }
+</style>
+
+</head>
+
+<body>
+
+<!-- Outer Border -->
+<table cellspacing="0" cellpadding="1" border="0" bgcolor="#2d3851" width="100%"><tr><td>
+<table cellspacing="0" cellpadding="1" border="0" bgcolor="#bfc4cb" width="100%"><tr><td>
+<table cellspacing="0" cellpadding="2" border="0" bgcolor="#ffffff" width="100%"><tr><td>
+<table cellspacing="0" cellpadding="1" border="0" bgcolor="#2d3851" width="100%"><tr><td>
+<table cellspacing="0" cellpadding="1" border="0" bgcolor="#7c8aa4" width="100%"><tr><td>
+<table cellspacing="1" cellpadding="0" border="0" width="100%">
+
+<tr>
+  <td bgcolor="#354463" style="padding: 20px">
+    &nbsp;
+  </td>
+</tr>
+
+<!-- Page Title -->
+<tr>
+  <td style="padding-left: 23px; padding-top: 15px; padding-bottom: 12px">
+    <h1><%templ tag(site_title2) %></h1>
+  </td>
+</tr>
+
+<!-- Navigation -->
+<tr>
+  <td align="right">
+    <table cellspacing="1" cellpadding="2" border="0" bgcolor="#354463" width="60%">
+    <tr>
+	<%templ tag(box_links) %>
+    </tr>
+    </table>
+  </td>
+</tr>
+
+<!-- Page Middle -->
+<tr>
+  <td>
+    <table cellspacing="1" cellpadding="2" border="0" bgcolor="#354463" width="100%">
+    <tr>
+      <td bgcolor="#bfc4cb" style="padding-left: 10px">
+        <table cellpadding="2" cellspacing="5" border="0">
+        <tr>
+          <td valign="top" width="210" style="padding-top: 12px">
+
+            <!-- News Section -->
+            <table cellspacing="0" cellpadding="1" border="0" bgcolor="#2d3851" width="100%"><tr><td>
+            <table cellspacing="0" cellpadding="1" border="0" bgcolor="#bfc4cb" width="100%"><tr><td>
+            <table cellspacing="0" cellpadding="2" border="0" bgcolor="#ffffff" width="100%"><tr><td>
+            <table cellspacing="0" cellpadding="1" border="0" bgcolor="#2d3851" width="100%"><tr><td>
+            <table cellspacing="2" cellpadding="2" border="0" bgcolor="#5f7797" width="100%">
+
+            <tr><td class="newsheader">
+              <strong>Index</strong>
+            </td></tr>
+
+            <tr><td class="newscell">
+		<%templ tag(box_index) %>
+            </td></tr>
+
+
+            </table>
+            </td></tr></table>
+            </td></tr></table>
+            </td></tr></table>
+            </td></tr></table>
+
+            <!-- Contact Mail -->
+            <br><br>
+            &nbsp;
+            <a href="mailto:<%templ tag(site_email) %>"><%templ tag(site_email) %></a>
+
+          </td>
+
+          <!-- Content -->
+          <td valign="top">
+		<%templ tag(site_location) %><BR>
+            <table cellspacing="0" cellpadding="0" border="0">
+            <tr>
+              <td bgcolor="#bfc4cb" style="padding-left: 10px; padding-top: 12px; padding-right: 15px">
+
+		<%templ tag(content) %>
+              </td>
+            </tr>
+            </table>
+          </td>
+
+        </tr>
+        </table>
+      </td>
+    </tr>
+
+    <!-- Last Update -->
+    <tr>
+      <td align="right" class="update" bgcolor="#5f7797">
+	
+      </td>
+    </tr>
+
+    </table>
+  </td>
+</tr>
+
+<!-- Copyright Info -->
+<tr>
+  <td align="right" class="copyright">
+	<%templ tag(site_footer) %>
+  </td>
+</tr>
+
+</table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+</td></tr></table>
+
+</body>
+</html>

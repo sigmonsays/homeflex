@@ -1,0 +1,24 @@
+#!/bin/bash
+
+source /etc/homeflex || exit 1
+
+
+if [ -z "$1" ] ; then
+	echo -e "Usage:\n\t$0 script | --help\n"
+	exit 1
+fi
+
+if [ "$1" == "--help" ] ; then
+	echo "Available commands:"
+	for i in `ls -1 homeflex/scripts/cmd/*.sh`
+	do
+		c=`basename "$i" .sh`
+		echo -e "\t$c"
+	done
+	exit 0
+fi
+
+
+CMD="${1}.sh"
+shift
+$HOME_ROOT/scripts/cmd/${CMD} $@

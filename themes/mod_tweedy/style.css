@@ -1,0 +1,168 @@
+<STYLE TYPE="text/css">
+/* 
+Dan's Home Amidst a Tangled Web stylesheet
+*/
+input {
+	border: 1px solid grey;
+}
+input:hover {
+	border: 1px solid black;
+}
+
+textarea {
+	border: 1px solid grey;
+}
+textarea:hover {
+	border: 1px solid black;
+}
+select {
+	border: 0.1em solid black;
+}
+
+body {
+	background : #336699;
+	color : #000000;
+	font-family : Helvetica,Lucida,Arial,sans-serif;
+	margin : 0pt; 
+}
+
+/* link color */
+a {
+	color : #0050a0;
+	text-decoration : none;
+	background : transparent;
+}
+
+/* active link */
+a:active {
+	color : #0000cc;
+	background : transparent;
+}
+
+/* hover anywhere */
+a:hover {
+	color : #0000cc;
+	background : transparent;
+}
+
+/* link on navBar */ 
+a.navBar {
+	color : #dddddd;
+	font-weight : bold;
+	background : transparent;
+	font-size : 80%;
+}
+
+/* link hover on navBar */
+a.navBar:hover {
+	color : #00aaff;
+	background : transparent;
+}
+
+/* link inside content tables */
+a.highlightNav {
+	color : #00aaff;
+	font-weight : bold;
+	background : transparent;
+	font-size : 80%;
+}
+
+/* any link text hover */
+a.highlightNav:hover {
+	color : #00aaff;
+	background : transparent;
+}
+
+/* navigation links on top right of content tables */
+a.rightTitle {
+	color : #dddddd;
+	background : transparent;
+}
+
+/* navigation links on top right of content tables (hover) */
+a.rightTitle:hover {
+	color : #0000cc;
+	background : #ffffff;
+}
+
+/* outline of the navBar at the top */
+table.navOutline {
+	background : #000000;
+	color : #ff0000;
+}
+
+/* outline color of content tables */
+table.outline {
+	background : #000000;
+	color : #ff0000;
+}
+
+/* color of content tables */
+table.content { 
+	background : #d0d0d0;
+        color : #000000;
+}
+
+/* row color for content tables */
+tr.content {
+	background : #d0d0d0;
+	color : #000000;
+	font-size : 90%;
+}
+
+/* color of navBar background and text */
+td.navBarColor {
+	background : #000000;
+	color : #cccccc;
+}
+
+td.leftTitle {
+	background : #305080;
+	color : #dddddd;
+	font-weight : bold;
+	font-size : 90%;
+}
+
+td.leftTitle2 {
+	background : #ffffff;
+	color : #dddddd;
+	font-weight : bold;
+	font-size : 90%;
+}
+
+td.leftNavTitle {
+	background : #305080;
+	color : #dddddd;
+	font-weight : bold;
+	font-size : 150%;
+}
+
+/* title text */
+td.rightNavTitle {
+	background : #d0d0d0;
+	color : #000000;
+	font-weight : bold;
+	font-size : 150%;
+}
+
+/* top right section of content table */
+td.rightTitle {
+	background : #484848;
+	color : #eeeeee;
+	font-weight : bold;
+	font-size : 80%;
+}
+
+/* color of the date on the right of navBar */
+.dateText {
+	color : #808080;
+	background : transparent;
+}
+
+/* any text out of the content tables */
+.normalText {
+	color : #dddddd;
+	background : transparent;
+	font-size : 70%;
+}
+</STYLE>

@@ -1,0 +1,90 @@
+<style type="text/css">
+body {
+ margin : 20px;
+ color: #444488;
+ font-size : 10px;
+ font-family : verdana;
+ font-weight : normal; 
+}
+
+.outside-box {
+ width : 100%;
+ display : block;
+ padding : 3px;
+ font-size : 10px;
+ font-family : verdana;
+ font-weight : normal; 
+ border-style : solid;
+ border-width : 1px;
+ border-color : #8888FF;
+}
+
+.inside-box {
+ padding : 3px;
+ font-size : 10px;
+ font-family : verdana;
+ font-weight : normal; 
+ border-style : solid;
+ border-width : 1px;
+ border-color : #8888FF;
+}
+
+.nav-title {
+ width : 150px;
+ text-align : left;
+ padding : 3px;
+ font-size : 10px;
+ font-family : verdana;
+ font-weight : normal; 
+ border-style : solid;
+ border-width : 1px;
+ border-color : #8888FF;
+ background : #CCCCFF;
+}
+
+.nav-link {
+ width : 150px;
+ text-align : left;
+ padding : 3px;
+ display : block;
+ border-style : solid;
+ border-width : 1px;
+ border-color : #8888FF;
+ border-top : none;
+}
+
+a.nav-link:link, a.nav-link:visited {
+ background-color : #FFFFFF;
+ color : #4444FF; 
+}
+
+a.nav-link:hover, a.nav-link:active {
+ background-color : #8888FF;
+ color : #FFFFFF; 
+}
+
+a:link {
+ color : #4444FF;
+ font-size : 10px;
+ text-decoration : none;
+}
+
+a:visited {
+ color : #4444FF;
+ font-size : 10px;
+ text-decoration : none;
+}
+
+a:active {
+ color : #0000FF;
+ font-size : 10px;
+ text-decoration : none;
+}
+
+a:hover {
+ color : #8888FF;
+ font-size : 10px;
+ text-decoration : none;
+}
+ 
+</style>

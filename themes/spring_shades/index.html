@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<%templ tag(head) %>
+    <title><%templ tag(site_title) %></title>
+    <meta http-equiv="Content-type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="imagetoolbar" content="no" />
+    <meta content="TRUE" name="MSSmartTagsPreventParsing" />
+</head>
+<body>
+    <h1><%templ tag(site_title2) %></h1>
+    <div id="breadcrumb">
+	<%templ tag(site_location) %>
+    </div>
+    <div align="right">
+	<%templ tag(login_heading) %>
+    </div>
+
+    <div id="page">
+        <div id="menu">
+		<%templ tag(box_index) %>
+        </div>
+	        <div id="content">
+			<div id="article">
+			<%templ tag(content) %>
+			</div>
+		</div>
+	</div>
+    </div>
+
+</body>
+</html>

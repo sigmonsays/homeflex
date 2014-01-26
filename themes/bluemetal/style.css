@@ -1,0 +1,131 @@
+<STYLE TYPE="text/css">
+.siteLocation a {
+	color: white;
+}
+
+.toolbar {
+	color: white;
+}
+
+BODY
+{
+    COLOR: #000000;
+    FONT-FAMILY: verdana, Helvetica, sans-serif;
+    FONT-SIZE: 12px;
+    BACKGROUND-COLOR: #0E4370;
+}
+A.button
+{
+    PADDING-RIGHT: 10px;
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    BACKGROUND-IMAGE: url(/homeflex/themes/%siteTheme%/_files/spacer.gif);
+    PADDING-BOTTOM: 2px;
+    WIDTH: 160px;
+    COLOR: #FFFFFF;
+    PADDING-TOP: 4px;
+    FONT-FAMILY: Verdana, Arial;
+    HEIGHT: 13px;
+    TEXT-DECORATION: none;
+	MARGIN-TOP: 0px;
+	MARGIN-LEFT: 0px;
+}
+A.button:hover
+{
+    BACKGROUND-IMAGE: url(/homeflex/themes/%siteTheme%/_files/button_on.gif);
+    COLOR: #FFFFFF;
+    TEXT-DECORATION: none;
+}
+.default-text-color
+{
+	COLOR: #0000cd;
+}
+.default-background-color
+{
+	BACKGROUND-COLOR: #0000cd;
+}
+.maintable
+{
+    BACKGROUND-COLOR: #0000cd;
+}
+.contentbox
+{
+	FONT-FAMILY: verdana, Helvetica, sans-serif;
+    FONT-SIZE: 12px;
+    BACKGROUND-COLOR: white
+}
+.formButton
+{
+    BORDER-RIGHT: #FFFFFF 1px solid;
+    BORDER-TOP: #0000cd; 1px solid;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: #0000cd; 1px solid;
+    COLOR: white;
+    BORDER-BOTTOM: #FFFFFF 1px solid;
+    FONT-FAMILY: Verdana, Verdana, 'MS Sans Serif';
+    BACKGROUND-COLOR: #195CB5;
+	CURSOR: hand;
+}
+.menu
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: verdana, Arial, Helvetica;
+    TEXT-DECORATION: none
+}
+.menu:hover
+{
+    FONT-WEIGHT: bold;
+    COLOR: #FFFFFF;
+    FONT-FAMILY: verdana, Arial, Helvetica;
+    TEXT-DECORATION: none;
+}
+.logged
+{
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 10px;
+	COLOR: #000000;
+	FONT-FAMILY: verdana, Arial, Helvetica;
+	TEXT-DECORATION: none;
+}
+.smaller
+{
+	FONT-WEIGHT: normal;
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	FONT-FAMILY: verdana, Arial, Helvetica;
+	TEXT-DECORATION: none;
+}
+A.smaller
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #000000;
+	FONT-FAMILY: verdana, Arial, Helvetica;
+	TEXT-DECORATION: none;
+}
+A.smaller:hover
+{
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 11px;
+	COLOR: #1267DB;
+	FONT-FAMILY: verdana, Arial, Helvetica;
+	TEXT-DECORATION: none;
+}
+.item
+{
+	FONT-SIZE: 11px;
+}
+.default-href
+{
+    COLOR: black;
+    TEXT-DECORATION: none
+}
+.default-href:hover
+{
+    COLOR: #0000cd;
+}
+</STYLE>

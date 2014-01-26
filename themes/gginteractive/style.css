@@ -1,0 +1,52 @@
+<STYLE TYPE="text/css">
+BODY {
+	font-family : Verdana, Arial, sans-serif ;
+	font-size : 12pt;
+	color: #000000;
+	background: #FFFFFF;
+	SCROLLBAR-FACE-COLOR: #8784C6; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #8784C6; 
+	SCROLLBAR-SHADOW-COLOR: #8784C6;
+	SCROLLBAR-ARROW-COLOR: #ffffff; 
+	SCROLLBAR-TRACK-COLOR: #ffffff; 
+	SCROLLBAR-DARKSHADOW-COLOR: #8784C6;
+}
+
+A {
+	text-decoration: none;
+	color:#8784C6;
+}
+	
+A:Hover {
+	border-top: 1px dotted #990000;
+	border-bottom: 1px dotted #990000;
+}
+
+TD {
+	font-size: 12px;
+} 
+
+.topbar {
+	font-size: 10px;
+	color: White;
+	font-family : Verdana, Arial, sans-serif ;
+}
+
+.submit{ 
+	font-size: 12px;
+	font-weight : bold;
+	color: White;
+	background: #1E2580;
+	border-top: 1px solid #ffffff;
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #ffffff;
+	border-bottom: 1px solid #ffffff;
+}
+
+.textbox{ 
+	border-top: 1px solid #1E2580;
+	border-left: 1px solid #1E2580;
+	border-right: 1px solid #1E2580;
+	border-bottom: 1px solid #1E2580;
+}
+</STYLE>

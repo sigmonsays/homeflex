@@ -1,0 +1,226 @@
+<STYLE>
+BODY {
+	COLOR: Black;
+	BACKGROUND-COLOR: #D3DEE4;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-ALIGN: left;
+	MARGIN:5px; 
+	PADDING:0px;
+}
+
+.bg{
+	BACKGROUND-COLOR: #718E9D;
+}
+
+.zoeken{
+	COLOR: #999999;
+	BACKGROUND-COLOR: #393D40;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-ALIGN: left;
+	PADDING-left: 10px;
+}
+.zinput{
+	BACKGROUND-COLOR: #7C98A6;
+	BORDER: 1px solid #000000;
+	COLOR: #000000;
+	HEIGHT: 14px;
+	FONT-FAMILY: verdana, helvetica, sans-serif;
+	FONT-SIZE: 10px;
+}
+.zoeken2{
+	COLOR: #000000;
+	BACKGROUND-COLOR: #B6C1C7;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	HEIGHT: 16px;
+	TEXT-ALIGN: center;
+}
+
+a.menub:link, a.menub:visited, a.menub:active {
+  	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+  	TEXT-DECORATION: none;
+  	FONT-WEIGHT: bold;
+  	FONT-SIZE: 10px;
+  	COLOR: #FFFFFF;
+  	BACKGROUND-COLOR: #5C6466;
+	TEXT-ALIGN: left;
+	PADDING-left: 6px;
+	BORDER: 1px solid #000000;
+	BORDER-LEFT: 0px;
+	BORDER-TOP: 0px;
+	BORDER-BOTTOM: 0px;
+	WIDTH: 90px;
+  }
+
+a.menub:hover {
+  	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+  	BACKGROUND-COLOR: #7C98A6;
+  	TEXT-DECORATION: none;
+  	FONT-WEIGHT: bold;
+  	FONT-SIZE: 10px;
+  	COLOR: #FFFFFF;
+	TEXT-ALIGN: left;
+	PADDING-left: 6px;
+	BORDER: 1px solid #000000;
+	BORDER-LEFT: 0px;
+	BORDER-TOP: 0px;
+	BORDER-BOTTOM: 0px;
+	WIDTH: 90px;
+}
+
+.menubar{
+	COLOR: #FFFFFF;
+	BACKGROUND-COLOR: #5C6466;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-ALIGN: left;
+}
+.conarea{
+	COLOR: Black;
+	BACKGROUND-COLOR: White;
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-ALIGN: left;
+}
+.mltop{
+	COLOR: #FFFFFF;
+	BACKGROUND-COLOR: #7C98A6;
+	TEXT-DECORATION: none;
+	FONT-WEIGHT: bold;
+	FONT-FAMILY: verdana, helvetica, sans-serif;
+	FONT-SIZE: 12px;
+	TEXT-ALIGN: center;
+	BORDER: 1px solid #000000;
+	BORDER-LEFT: 0px;
+	BORDER-RIGHT: 0px;
+	WIDTH: 100%;
+}
+.ml{
+	COLOR: #000000;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-DECORATION: none;
+	FONT-FAMILY: verdana, helvetica, sans-serif;
+	TEXT-ALIGN: left;
+	BORDER: 1px solid #000000;
+	BORDER-LEFT: 0px;
+	BORDER-RIGHT: 0px;
+	BORDER-TOP: 0px;
+	PADDING-left: 10px;
+	WIDTH: 100%;
+}
+
+
+
+.nav1 {
+  	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+  	TEXT-DECORATION: none;
+  	FONT-SIZE: 12px;
+  	COLOR: #000000;
+  	BACKGROUND: transparent;
+  	PADDING-left: 20px;
+}
+
+.content{
+	PADDING-left: 15px;
+	PADDING-right: 15px;
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-ALIGN: left;
+	FONT-SIZE: 12px;
+}
+a:link, a:visited, a:active {
+  	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+  	TEXT-DECORATION: none;
+  	COLOR: #537BB6;
+ 	BACKGROUND: transparent;
+
+}
+
+a:hover {
+  	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+  	TEXT-DECORATION: none;
+  	COLOR: #CC0000;
+  	BACKGROUND: transparent;
+
+}
+
+a.copyright:link, a.copyright:visited, a.copyright:active {
+  	TEXT-DECORATION: none;
+  	FONT-WEIGHT: normal;
+  	COLOR: #00008B;
+  	BACKGROUND: transparent;
+}
+
+a.copyright:hover {
+  	TEXT-DECORATION: none;
+  	FONT-WEIGHT: normal;
+  	COLOR: #537BB6;
+  	BACKGROUND: transparent;
+}
+
+a.menubar:link, a.menubar:visited, a.menubar:active {
+  	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+  	TEXT-DECORATION: none;
+  	COLOR: #537BB6;
+ 	BACKGROUND: transparent;
+	FONT-SIZE: 11px;
+
+}
+
+a.menubar:hover {
+  	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+  	TEXT-DECORATION: none;
+  	COLOR: #CC0000;
+  	BACKGROUND: transparent;
+	FONT-SIZE: 11px;
+
+}
+
+
+.date {
+  	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+  	TEXT-DECORATION: none;
+  	FONT-SIZE: 10px;
+  	FONT-WEIGHT: bold;
+  	COLOR: #000000;
+  	BACKGROUND: transparent;
+  	PADDING-right: 20px;
+}
+
+.copyright {
+	FONT-FAMILY: Verdana, Arial, Sans-Serif;
+	TEXT-DECORATION: none;
+	FONT-SIZE: 10px;
+	COLOR: #00008B;
+	BACKGROUND: transparent;
+}
+
+
+.title {
+	COLOR: #00008B;
+	TEXT-ALIGN: left;
+	FONT-SIZE: 20pt;
+	FONT-FAMILY: Georgia, Verdana, arial, helvetica, serif;
+}
+
+
+TABLE { 
+	FONT-SIZE: 10px; 
+	COLOR: #000000; 
+	FONT-FAMILY: Verdana, arial, helvetica, serif;
+	PADDING: 0;
+}
+
+
+input{	
+	BACKGROUND-COLOR: #7C98A6;
+	BORDER: 1px solid #000000;
+	COLOR: #000000;
+	FONT-FAMILY: verdana, helvetica, sans-serif;
+	FONT-SIZE: 10px;
+}
+</STYLE>

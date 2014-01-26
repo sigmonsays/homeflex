@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<%templ tag(head) %>
+<title><%templ tag(site_title) %></title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<style type="text/css">
+<!--
+p { 
+ font-family: verdana, arial, "ms sans serif", sans-serif; 
+ font-size: 12px; 
+ margin: 2px;
+ line-height: 14px;
+ padding-left: 20px;
+ color: #000000;
+ }
+h3 { 
+ font-family: verdana, arial, "ms sans serif", sans-serif;
+ font-size: 16px; 
+ margin: 10px;
+ line-height: 18px;
+ padding-left: 5px;
+ color: #e9f2fc;
+ } 
+.smallheader
+ { 
+ font-family: verdana, arial, "ms sans serif", sans-serif; 
+ font-size: 10px; 
+ font-weight: normal;
+ padding-left: 10px;
+ padding-right: 5px;
+ line-height: 14px;
+ color: #e9f2fc;
+ }
+.small { 
+ font-family: verdana, arial, "ms sans serif", sans-serif; 
+ font-size: 10px; 
+ font-weight: normal;
+ padding-left: 5px;
+ line-height: 14px;
+ color: #e9f2fc;
+ }
+a:link {
+ color: #707770;
+ font-weight: normal; 
+ text-decoration: none;
+ }
+a:visited {
+ color: #707770;
+ font-weight: normal; 
+ text-decoration: none;
+ }
+a:active {
+ color: #707770;
+ font-weight: normal; 
+ text-decoration: none;
+ }
+a:hover {
+ color:#707770;
+ font-weight: normal; 
+ text-decoration: none;
+ }  
+.info
+ { 
+ font-family: verdana, arial, "ms sans serif", sans-serif; 
+ font-size: 10px; 
+ line-height: 13px;
+ padding-left: 5px;
+ color: #e9f2fc;
+ }
+.infohead { 
+ font-family: verdana, arial, "ms sans serif", sans-serif; 
+ font-size: 10px; 
+ line-height: 12px;
+ padding-left: 20px;
+ color: #e9f2fc;
+ }
+.newshead { 
+ font-family: verdana, arial, "ms sans serif", sans-serif; 
+ font-size: 12px; 
+ line-height: 13px;
+ padding-left: 5px;
+ color: #333333;
+ } 
+input, textarea, select {
+ background-color: #CCCCCC;
+ border-style: solid;
+ border-width: 1px;
+ font-family: verdana, arial, sans-serif;
+ font-size: 10px;
+ color: #333333;
+ padding: 0px;
+}
+
+a.link {
+	color: white;
+}
+
+-->
+</style>
+
+</head>
+
+<body bgcolor="#808080">
+
+<br>
+
+<center>
+
+<!-- Main Table -->
+
+<table border="0" cellpadding="1" cellspacing="0" bgcolor="#808080" width="700"><tr><td colspan="2">
+
+<!-- Header --> 
+
+<table border="0" cellpadding="1" cellspacing="0" bgcolor="#000000" width="100%"><tr><td>
+
+<table border="0" cellpadding="0" cellspacing="0" bgcolor="#808080" width="100%">
+  
+	<tr>
+	  <td bgcolor="#354463" class="smallheader" align="right"><%templ tag(current_date) %></td>
+	</tr>
+	
+	<tr>
+	  <td bgcolor="#354463"><h3><%templ tag(site_title2) %></h3></td>
+	</tr>
+  
+	<tr>
+	  <td bgcolor="#354463"class="smallheader" align="right">"I never think of the future, it comes soon enough." - A. Einstein</td>
+	</tr>		
+
+</table>
+
+</td></tr></table>
+
+<!-- End Header -->  			
+
+</td></tr>
+
+<tr><td>&nbsp;</td>
+
+<td align="center">
+
+
+<table cellspacing="1" cellpadding="2" border="0" bgcolor="#354463" width="700">
+	<tr>
+		<%templ tag(box_index) %>
+	</tr>
+</table>
+
+
+<!-- End Menu -->
+
+</td></tr>
+
+<tr><td colspan="2">
+
+<!-- Main Field -->
+
+<table border="0" cellpadding="1" cellspacing="0" bgcolor="#000000" width="100%"><tr><td>
+<table border="0" cellpadding="0" cellspacing="10" width="100%" bgcolor="#dcdcdc"><tr><td width="160" valign="top" align="center">
+<table border="0" cellpadding="0" cellspacing="0"><tr><td>
+
+<!-- Left -->
+
+  <table cellspacing="0" cellpadding="1" border="0" bgcolor="#2d3851"><tr><td>
+	<table cellspacing="0" cellpadding="1" border="0" bgcolor="#BFC4CB"><tr><td>
+	<B>Links</B><BR>
+	<table cellspacing="0" cellpadding="1" border="0" bgcolor="#2d3851"><tr><td>
+		
+		<%templ tag(box_links) %>
+		<BR>
+	</td></tr></table>							
+	</td></tr></table>
+	</td></tr></table>
+	
+</td></tr>
+<tr><td height="10"></td></tr>
+<tr><td align="center">
+	
+	<table cellspacing="0" cellpadding="1" border="0" bgcolor="#2d3851"><tr><td>
+	<table cellspacing="0" cellpadding="1" border="0" bgcolor="#BFC4CB"><tr><td>
+	<table cellspacing="0" cellpadding="1" border="0" bgcolor="#2d3851"><tr><td>
+		
+		<%templ tag(box_login) %>
+	
+	</td></tr></table>							
+	</td></tr></table>
+	</td></tr></table>
+
+</td></tr></table>	
+
+<!-- End Left -->
+	
+</td>
+
+<td valign="top">
+
+<!-- Right -->
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+	
+	<tr><td width="100%" align="right">
+	
+	<%templ tag(site_location) %>	
+	</td></tr>
+	
+	<tr><td width="100%">
+
+
+	<%templ tag(content) %>
+	
+</td></tr></table>
+
+<!-- End Right -->
+
+</td></tr></table>
+</td></tr></table>
+
+<!-- End Mainfield -->
+
+</td></tr>
+<tr><td colspan="2" width="100%">
+
+<table border="0" cellpadding="1" cellspacing="0" bgcolor="#000000" width="100%"><tr><td>
+<table border="0" width="100%" cellpadding="0" cellspacing="0"><tr><td  bgcolor="#354463" align="right" class="infohead" width="100%">&nbsp;</td></tr></table>
+</td></tr></table>
+
+</table>
+
+<!-- End Main Table -->
+
+</center>
+
+<br>
+<TABLE WIDTH="100%" CELLSPACING=0>
+<TR><TD BGCOLOR="white">
+<%templ tag(site_footer) %>
+</TD></TR>
+</TABLE>
+</body>
+</html>

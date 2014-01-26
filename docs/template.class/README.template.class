@@ -1,0 +1,129 @@
+The template class is far better than the old, and simple %replace_with_something% theming system. 
+
+The general format of any template tag is:
+
+		<%templ func(arg1, arg2, ...); func2(arg1, arg2, ...) %>
+
+		/* constructor */
+		function template()
+
+		Tag Related functions
+		----------------------------
+
+		A tag is a simple replacement operation. Tags can be a variable, define, include, anything.
+		
+
+		function addTag($tagName, $type)
+			Lower level add function, I suggest using the other add functions instead of this one
+			Adds a tag named $tagName with type $type. Stores all other arguments passed to it in an
+			array. If a tag exists, it returns FALSE, otherwise TRUE
+
+		function tagExists($tagName)
+			returns TRUE if a tag exists, otherwise FALSE
+
+		function deleteTag($tagName)
+			removes a tag. Returns TRUE if tag is removed, FALSE if tag doesn't exist.
+
+
+		******************************************************************************************
+		NOTE: All of these functions return FALSE if the tag already exists, TRUE otherwise.
+		Some of the functions will return FALSE based on other criteria, that will be mentioned
+		below.
+		******************************************************************************************
+
+		function addTagInclude($tagName, $include)
+			Add a tag $tagName, the contents of $tagName are replaced with file $include
+			Returns FALSE if the file doesn't exist
+
+		function addTagFunction($tagName, $function)
+			Add a tag $tagName, the output of $function are caught using output buffering. The
+			return value of the function is dicarded. No arguments are passed to this function.
+
+			The function is not checked to exist, as it can be declared after the addTag() call
+
+		function addTagReturnFunction($tagName, $function)
+			Add a tag $tagName, the contents of $function are replaced with the
+			return value. No arguments are passed to this function.
+
+			The function is not checked to exist, as it can be declared after the addTag() call
+
+		function addTagDefine($tagName, $define)
+			Adds a tag $tagname, returning the value of the define $define. A define is created
+			with the PHP define() function.
+
+		function addTagVariable($tagName, $variable)
+			Adds a tag $tagName, it's value is replaced with $variable, out of the $GLOBALS array
+
+		function addTagPostVariable($tagName, $variable)
+			Adds a tag $tagName, it's value is replaced with $variable, out of the $_POST array
+
+		function addTagGetVariable($tagName, $variable) {
+			Adds a tag $tagName, it's value is replaced with $variable, out of the $_GET array
+
+		function loadTemplate($resource, $template_data)
+			This function is a helper, I don't recommend calling it directly, See below.
+
+			For the hardcore: $resource is just a name describing the $template_data, like where it came
+			from. $template_data is a string. $resource is not used yet but might be in the future.
+
+		function loadTemplateFromFile($file)
+			Resource name: 'file'
+			Loads a template from $file, returns TRUE if the file exists and was loaded ok. FALSE if not.
+
+		function loadTemplateFromString($string)
+			Resource name: 'string'
+			Loads a template from a string, returns TRUE
+
+
+		The following doTag* functions don't need to be called directly, they're used internally,
+		and are pretty self explanatory.
+
+		function doTagDefine($define)
+		function doTagInclude($include)
+		function doTagFunction($function)
+		function doTagReturnFunction($function)
+		function doTagVariable($variable)
+		function doTagPostVariable($variable)
+		function doTagGetVariable($variable)
+
+
+		function loadModule($file)
+			Loads a module, See the modules section
+
+
+		More internal functions... Parser & code related
+
+		function parserHasWork($data)
+
+		function codeParser($code, $len)
+		function doCodeParser($code, $len)
+
+		function doParseTemplate($data)
+		function parseTemplate()
+
+		function doTemplateCode($code_block, $code_len)
+
+		These functions do the Tag code, Echo code and date code respectively
+
+		function doTemplateTag($tag)
+		function doTemplateEcho($str)
+		function doTemplateDate($format)
+
+
+Supported template functions:
+----------------------------
+
+	These functions are invoked like:
+
+	<%templ echo(Hello World); %>
+
+
+	echo(string)
+		Echos out a string
+	
+	date(format)
+		Prints the date
+
+	
+	tag(tagName)
+		Prints the output of tag

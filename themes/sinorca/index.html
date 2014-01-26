@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+	<%templ tag(head) %>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <meta name="author" content="haran" />
+    <meta name="generator" content="Windows Notepad" />
+
+    <title><%templ tag(site_title) %></title>
+  </head>
+
+  <body>
+    <div id="top"></div>
+  
+    <!-- ###### Header ###### -->
+
+    <div id="upperMenuBar">
+      <div class="LHS">
+		<%templ tag(current_date) %>
+      </div>
+      <div class="RHS">
+		<%templ tag(login_heading) %>
+      </div>
+    </div>
+
+    <div id="header"><%templ tag(site_title2) %></div>
+
+    <div id="lowerMenuBar">
+	<%templ tag(site_location) %>
+    </div>
+
+    <!-- ###### Side Boxes ###### -->
+
+    <div class="sideMenuBox">
+      <div>Index</div>
+	<%templ tag(box_index) %>
+    </div>
+    
+    <!-- ###### Body Text ###### -->
+
+    <div id="bodyText" style="height: 100%">
+		<%templ tag(content) %>
+    </div>    
+    <!-- ###### Footer ###### -->
+
+    <div id="footer" style="height: 0px">
+      <div>
+        <span class="footerLHS">
+          E-mail:&nbsp;<a href="mailto:<%templ tag(site_email) %>"><%templ tag(site_email) %></a>
+        </span>
+      </div>
+
+      <div>
+        Copyleft &copy; <%templ tag(current_date) %>
+      </div>
+      
+    </div>
+  </body>
+</html>

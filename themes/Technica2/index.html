@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+	<%templ tag(head) %>
+	<title>..:.:.:: <%templ tag(site_title) %> ::.:.:..</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+</head>
+
+<body><center>
+	<div align="left" class="outside-box">
+		<%templ tag(site_location) %>
+	</div>
+	<div class="outside-box" style="border-top: none;">
+		..:.:.:: <H2><%templ tag(site_title2) %></H2> ::.:.:..
+	</div>
+	<div class="outside-box" style="border-top: none;">
+		<table cellspacing="0" cellpadding="0" border="0">
+			<tr>
+				<td valign="top">
+					<!-- NAV MENU -->
+					<div style="padding-bottom: 3px;">
+						<div class="nav-title">
+							CONTENTS ::.:.:..
+						</div>
+						<%templ tag(box_index) %>
+					</div>
+					<!-- /NAV-MENU -->
+					<!-- NAV-MENU -->
+					<div style="padding-bottom: 3px;">
+						<div class="nav-title">
+							DEV TEAM ::.:.:..
+						</div>
+						<%templ tag(box_links) %>
+					</div>
+					<!-- /NAV-MENU -->
+				</td>
+				<td valign="top" width="100%" style="padding-left: 3px; padding-right: 3px;">
+					<div style="padding-bottom: 3px;">
+						<%templ tag(content) %>
+					</div>
+					<!-- NEWS-ITEM -->
+					<br />
+				</td>
+				<td valign="top">&nbsp;</td>
+			</tr>
+		</table>
+	</div>
+	<div class="outside-box" style="border-top: none;">
+		..:.:.:: <%templ tag(site_footer) %> ::.:.:..
+	</div>
+</center></body>
+</html>
+
+
+

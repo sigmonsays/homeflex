@@ -1,0 +1,11 @@
+<STYLE>
+a {
+	color: black;
+}
+a.boxindex {
+	color: black;
+}
+a.boxindex:hover {
+	color: red;
+}
+</STYLE>

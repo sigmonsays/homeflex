@@ -1,0 +1,44 @@
+#!/bin/bash
+
+# all these settings in this file are for various shell scripts
+# once you're complete, check the run command to see what can be done
+
+# set this to your web root (eg /usr/local/apache/htdocs )
+
+WEB_USER="apache"
+WEB_GROUP="root"
+
+WEB_ROOT=""
+
+# this shouldn't need to be changed unless you know what you're doing
+HOME_ROOT="$WEB_ROOT/homeflex"
+
+# database information
+# if you want the shell scripts to be able to use mysql stuff, fill this out
+MYSQL_HOST="localhost"
+MYSQL_USER="root"
+MYSQL_PASS=""
+MYSQL_DATABASE="homeflex"
+
+# You don't need to edit anything beyond this point
+
+function must {
+	if ! $@ ; then
+		echo "ERROR: $1 failed"
+		exit 1
+	fi
+}
+
+if [ ! -d "$WEB_ROOT" ] ; then
+	echo "ERROR: \$WEB_ROOT is not set properly!"
+	exit 1
+fi
+
+if [ ! -d "$HOME_ROOT" ] ; then
+	echo "ERROR: \$HOME_ROOT is not set properly!"
+	exit 1
+fi
+
+
+must cd $WEB_ROOT
+

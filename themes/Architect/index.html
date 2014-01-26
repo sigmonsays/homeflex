@@ -1,0 +1,83 @@
+<HTML>
+<HEAD>
+	<%templ tag(head) %>
+	<TITLE> <%templ tag(site_title) %> </TITLE>
+</HEAD>
+<BODY TEXT=#050505 LINK=#336699 ALINK=#336699 VLINK=#336699 BGCOLOR=#999999>
+
+<TABLE WIDTH="100%" CELLPADDING="0" CELLSPACING="0" BORDER="0" ALIGN="CENTER">
+	<TR>
+		<TD BGCOLOR=#000000>
+			<TABLE WIDTH="100%" CELLPADDING="2" CELLSPACING="1" BORDER="0">
+				<TR>
+					<TD WIDTH="33%" ALIGN="LEFT" VALIGN="TOP" BGCOLOR=#F5F5F5>
+						<!-- Left Side Links -->
+							<H4>Navigation</H4>
+							<%templ tag(box_index_dropdown) %>
+						<!-- End Left Side Links -->
+					</TD>
+					<TD WIDTH="33%" ALIGN="CENTER" VALIGN="MIDDLE" BGCOLOR=#F5F5F5>
+						<!-- Header Text -->
+						<FONT SIZE="7" FACE="Lucida, Helvetica, Arial" COLOR=#bbbbbb>
+							<B><%templ tag(site_title2) %></B>
+						</FONT>
+
+						<BR>
+
+						<FONT SIZE="2" FACE="Lucida, Helvetica, Arial">
+							.:: Kinda like that ::.
+						</FONT>
+
+						<HR WIDTH="125" SIZE="1" NOSHADE ALIGN="CENTER">
+						<!-- End Header Text -->
+					</TD>
+					<TD WIDTH="33%" ALIGN="RIGHT" VALIGN="TOP" BGCOLOR=#F5F5F5>
+						<!-- Right Side Links -->
+							<A HREF="/">Home</A><BR>
+							<A HREF="/login">Login</A><BR>
+							<A HREF="/source">Source</A><BR>
+							<A HREF="/contact">Contact</A>
+							<BR><!-- Make sure you include this BR tag -->
+						<!-- End Right Side Links -->
+					</TD>
+				</TR>
+				<TR>
+					<TD BGCOLOR=#dddddd ALIGN="LEFT" VALIGN="MIDDLE" COLSPAN=2>
+						<FONT SIZE="2" FACE="Lucida, Helvetica, Arial" COLOR=#707070>
+							Current Location: &nbsp;&nbsp; <%templ tag(site_location) %>
+						</FONT>
+					</TD>
+					<TD BGCOLOR=#dddddd ALIGN="RIGHT">
+							<FONT SIZE="2" FACE="Lucida, Helvetica, Arial" COLOR=#707070>
+								Last Updated: &nbsp; <I>Many moons ago..</I>
+							</FONT>
+					</TD>
+				</TR>
+				<TR>
+					<TD COLSPAN="3" ALIGN="CENTER" VALIGN="TOP" BGCOLOR=#F5F5F5>
+						<!-- Start Body -->
+						<TABLE WIDTH="94%" CELLPADDING="0" CELLSPACING="0" BORDER="0" ALIGN="CENTER">
+							<TR>
+								<TD>
+									<BR>
+									<%templ tag(content) %>
+								</TD>
+							</TR>
+						</TABLE>			
+						<!-- End Body -->
+					</TD>
+				</TR>
+				<TR>
+					<TD COLSPAN="3" WIDTH="100%" ALIGN="CENTER" VALIGN="MIDDLE" BGCOLOR=#dddddd>
+						<!-- Footer -->
+						<%templ tag(site_footer) %>
+						<!-- End Footer -->
+					</TD>
+				</TR>
+			</TABLE>
+		</TD>
+	</TR>
+</TABLE>
+
+</BODY>
+</HTML>

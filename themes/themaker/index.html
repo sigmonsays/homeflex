@@ -1,0 +1,113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<%templ tag(head) %>
+<title><%templ tag(site_title) %></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+<!--
+body          {font-family: Helvetica, Arial, Verdana; font-size: 12px; background-color: #FFFFFF; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px}
+.logo         {font-family: Helvetica, Arial, Verdana; font-size: 50px; font-weight: bold; color: #2C5885}
+.form1        {font-size: 10px; color: #FFFFFF; border: 1px solid; font-family: Helvetica, Arial, Verdana; background-color: #34699E; border-color: #FFFFFF solid}
+.form2        {font-size: 9px; color: #FFFFFF; border: 1px solid; font-family: Helvetica, Arial, Verdana; background-color: #34699E; border-color: #FFFFFF solid}
+.banner       {font-family: Helvetica, Arial, Verdana; font-size: 10px; color: #4382C0; border: 1px #4382C0 dashed}
+a.top:visited {font-family: Helvetica, Arial, Verdana; font-size: 12px; color: #34699E; text-decoration: none}
+a.top:link    {font-family: Helvetica, Arial, Verdana; font-size: 12px; color: #34699E; text-decoration: none}
+a.top:hover   {font-family: Helvetica, Arial, Verdana; font-size: 12px; color: #4382C0; text-decoration: none}
+a.top:active  {font-family: Helvetica, Arial, Verdana; font-size: 12px; color: #4382C0; text-decoration: none}
+.text         {font-family: Helvetica, Arial, Verdana; font-size: 12px; color: #000000}
+.white        {font-family: "Courier New", Courier, mono; font-size: 10px; color: #CCCCCC}
+
+ul                         {padding: 0; margin: 0}
+ul li                      {list-style-type: none; position: relative}
+ul ul                      {display: none}
+ul li:hover > ul           {display: block; position: absolute}
+ul ul                      {width: 118px}
+li a                       {display: block}
+li.sub > a                 {font-weight: bold}
+.rtnv > ul                 {font-size: 16px}
+.rtnv ul li                {padding: 2 0 2 5px; line-height: 15px}
+.rtnv li > a               {color: #FFFFFF; background-color: transparent; padding: 1px}
+.rtnv li:hover             {background-color: #4382C0}
+.rtnv li.sub:hover         {margin-left: -118px; background: #2C5885}
+.rtnv li.sub:hover > a     {color: #FFFFFF}
+.rtnv li.sub:hover > ul    {top: 21px; left: 0px; background: #34699E}
+
+-->
+</style>
+</head>
+
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="5">
+  <tr bgcolor="#2C5885"> 
+    <td> 
+      <form method=get action="http://www.google.com/search">
+        <div align="right"><a href="index.html" class="top">oswd.org</a>&nbsp;&nbsp;<a href="index.html" class="top">freshmeat.net</a>&nbsp;&nbsp;<a href="index.html" class="top">google.com.br</a>&nbsp;&nbsp;<a href="index.html" class="top">sf.net</a>&nbsp; 
+          <a href="index.html" class="top">mozilla.org</a> &nbsp; 
+          <input class="form1" type=text name="q" width=20 size=29 length=20>
+          <input class="form2" type=submit value=" :-) " name="submit">
+        </div>
+      </form>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr> 
+    <td width="35%" bgcolor="#34699E" valign="top"> 
+      <div class="logo"><%templ tag(site_title2) %></div>
+    </td>
+    <td width="65%" bgcolor="#34699E" valign="middle"> 
+      <table class="banner" width="470" border="0" cellspacing="0" cellpadding="1" height="70" align="right">
+        <tr>
+            <td>
+            <div align="center">
+		<<%templ tag(login_heading) %>>
+		<BR><BR>
+		<<%templ tag(site_location) %>
+	    </div>
+          </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="10">
+  <tr> 
+    <td width="80%" valign="top"> 
+      <table width="90%" border="0" cellspacing="0" cellpadding="20">
+        <tr> 
+          <td><%templ tag(content) %></td>
+        </tr>
+      </table>
+      <p><br>
+        <span class="white"><%templ tag(current_date) %></span></p>
+      </td>
+    <td width="20%" bgcolor="#4382C0" valign="top">
+<span class="rtnv"> 
+  <ul>
+	    <li class="sub"><a href="/index" title="Navigation">Navigation</a>
+
+	<ul>
+	<li class="sub"><a href="/" title="Sections">Sections</a><ul><%templ tag(box_index) %></ul></li>
+
+
+        <li class="sub"><a href="/" title="Links">Links</a> 
+          <ul>
+		<%templ tag(box_links) %>
+          </ul>
+        </li>
+
+        <li><a href="/contact" title="Contact">Contact</a></li>
+      </ul>
+    </li>
+  </ul>
+</span>
+<BR>
+<%templ tag(box_index) %>
+</td>
+</tr>
+</table>
+<BR>
+<center><%templ tag(site_footer) %></center>
+</body>
+</html>

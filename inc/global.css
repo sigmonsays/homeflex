@@ -1,0 +1,68 @@
+<STYLE TYPE="text/css">
+
+.row1 {
+	color: black;
+	background-color: #e5e5e5;
+}
+
+.row2 {
+	color: black;
+	background-color: #ffffff;
+}
+
+a.menu:link {
+	color: black;
+	display : block; 
+	padding-top : 2px; 
+	padding-right : 2px; 
+	padding-bottom : 2px; 
+	padding-left : 2px; 
+	border-style : solid; 
+	border-top-width : 1px; 
+	border-right-width : 0px;
+	border-bottom-width : 1px; 
+	border-left-width : 1px; 
+	width : 70px; 
+	font-weight : normal; 
+	text-align : center; 
+	text-decoration: none;
+} 
+
+a.menu:hover {
+	color: black;
+	background-color: #e2e2e2;
+	display : block; 
+	padding-top : 2px; 
+	padding-right : 2px; 
+	padding-bottom : 2px; 
+	padding-left : 2px; 
+	border-style : solid; 
+	border-top-width : 1px; 
+	border-right-width : 0px; 
+	border-bottom-width : 1px; 
+	border-left-width : 1px; 
+	width : 70px; 
+	font-weight : normal; 
+	text-align : center; 
+	text-decoration: none;
+} 
+
+a.menu:visited {
+	color: black;
+	display : block; 
+	padding-top : 2px; 
+	padding-right : 2px; 
+	padding-bottom : 2px; 
+	padding-left : 2px; 
+	border-style : solid; 
+	border-top-width : 1px; 
+	border-right-width : 0px; 
+	border-bottom-width : 1px; 
+	border-left-width : 1px; 
+	width : 70px; 
+	font-weight : normal; 
+	text-align : center; 
+	text-decoration: none;
+} 
+
+</STYLE>

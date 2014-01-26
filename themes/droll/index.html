@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- colors and general layout based on http://geocities.yahoo.com -->
+<html>
+<head>
+	<%templ tag(head)%>
+	<title><%templ tag(site_title) %></title>
+
+	<style type="text/css">
+	tr.row1 {
+        	background-color: #e2e2e2;
+	}
+
+	tr.row2 {
+	        background-color: #FFFFFF;
+	}
+
+	body {
+		background : #ffffff;
+		font-family : Verdana,Lucida,sans-serif;
+	}
+
+	body,tr,td {
+		font-size : 85%;
+	}
+
+	a {
+		color : #003399;
+		text-decoration : none;
+	}
+
+	a:hover {
+		text-decoration : underline;
+	}
+
+	tr.titleBarTop {
+		background : #003399;
+	}
+
+	tr.tableBody1 {
+		background : #eeeeee;
+	}
+
+	tr.tableBody2 {
+		background : #ffffff;
+	}
+
+	td.tableOutline1 {
+		background : #999999;
+	}
+
+	td.tableOutline2 {
+		background : #9999ff;
+	}
+
+	td.tableHead1 {
+		background : #dcdcdc;
+	}
+
+	tr.tableHead2 {
+		background : #ccccff;
+	}
+
+	td.footerOutline {
+		background : #a0b8c8;
+	}
+
+	tr.footerBody {
+		background : #ffffff;
+	}
+
+	.title {
+		font-size : 200%;
+		color : #ffffff;
+		font-weight : bold;
+	}
+
+	.heading {
+		font-size : 120%;
+		font-weight : bold;
+	}
+	</style>
+</head>
+
+<body>
+
+<div align=center>
+
+<table border=0 cellpadding=1 cellspacing=0 width="80%">
+<tr>
+	<td class="tableOutline1">
+		<table border=0 cellspacing=0 cellpadding=4 width="100%">
+		<tr valign=middle class="titleBarTop">
+			<td> 
+				<span class=title><%templ tag(site_title2) %></span>
+				
+			</td>
+			<td align=right><font color="white"><%templ date(F dS, Y) %></font>
+			</td>
+		</tr>
+		</table>
+
+
+		<table width="100%" cellpadding=2 cellspacing=0 border=0>
+		<tr class=tableBody1 valign=middle>
+			<td width="50%">
+				<span class=heading><%templ tag(login_heading) %></span>
+			</td>
+			<td width="50%" align=right>
+				<b><%templ rand(50, 100) %>% Fat Free Web Site</b>
+			</td>
+		</tr>
+		</table>
+
+	</td>
+</tr>
+</table>
+
+<table border=0 cellpadding=4 cellspacing=0 width="80%">
+<tr>
+	<td>
+		<%templ tag(site_location) %>
+	</td>
+</tr>
+</table>
+
+<p>
+
+<table width="80%" cellpadding=3 cellspacing=0 border=0>
+<tr>
+	<td valign=top width="30%">
+		<table border=0 cellpadding=1 cellspacing=0 width="200">
+		<tr>
+			<td class="tableOutline1">
+				<table border=0 cellpadding=2 cellspacing=0 width="100%">
+				<tr>
+					<td nowrap class="tableHead1">
+						<b>Resources</b>
+					</td>
+				</tr>
+				<tr class=tableBody1>
+					<td>
+						<table border=0 cellpadding=1 cellspacing=0 width="100%">
+
+<%templ sqlList(
+	'SELECT * FROM $dbTables[sections] WHERE active=1 AND inToolbar=1 AND regular=1 ORDER BY name ASC',
+	'<TR><TD>:: <A HREF="$entry->url">$entry->name</A></TD></TR>',
+	'<TR><TD>:: <A HREF="$entry->url"><B>$entry->name</B></A></TD></TR>',
+	'$cat,$entry->include', 'cat'
+) %>
+
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+						</tr>
+						</table>
+					</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+		<p>
+		<table cellpadding=1 cellspacing=0 border=0 width="200">
+		<tr>
+			<td class=tableOutline1>
+				<table cellpadding=3 cellspacing=0 border=0 width="100%">
+				<tr class=tableHead2>
+					<td>
+						<b>Other things to do</b>
+					</td>
+				</tr>
+				<tr class=tableBody2>
+				<td>
+					<%templ tag(box_links) %>
+				</td>
+				</tr>
+				</table>
+			</td>
+		</tr>
+		</table>
+	</td>
+	<td width="1%">&nbsp;</td>
+	<td width="69%" valign=top>
+		<table cellpadding=1 cellspacing=0 border=0 width="100%">
+		<tr>
+			<td>
+				<%templ tag(content) %>
+			</td>
+		</tr>
+		</table>
+<br>
+<p>
+</div>
+		<table cellpadding=1 cellspacing=1 border=0 width="100%">
+
+		<tr valign=top class=footerBody>
+			<td align=center colspan=2>
+				<%templ tag(site_footer) %>
+			</td>
+		</tr>
+		</table>
+
+
+</body>
+</html>

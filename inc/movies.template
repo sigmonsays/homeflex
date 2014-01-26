@@ -1,0 +1,22 @@
+<table width=100% border=0 cellspacing=0 cellpadding=0>
+<tr><td class=a>
+
+<table width=100% border=0 cellspacing=0>
+<tr><td>
+  <tr>
+    <th valign="middle" align="center" rowspan="3" width="108"><p align="center"><br>Rated: <b>%rated%</b><br>%picture%</th>
+    <td width="351"><font size=4><b>%title% %year%</b></font></td>
+    <td width="414"><p align="right">added: <b>%datecreated%</b></td>
+  </tr>
+  <tr>
+    <td class="a" width="351">Directed by: <b>%director%</b></td>
+    <td class="a" width="414">
+      <p align="left">Starring Actors: <b>%starring%</b></td>
+  </tr>
+  <tr>
+    <td width="771" colspan="2"><BR><BR>%summary%</td>
+  </tr>
+</td></tr>
+</table>
+</td></tr>
+</table>

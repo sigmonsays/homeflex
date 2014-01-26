@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title><%templ tag(site_title) %></title>
+<%templ tag(head) %>
+</head>
+<body bottommargin="0" leftmargin="0" rightmargin="0" topmargin="0" marginheight="0" marginwidth="0" bgcolor="#FFFFFF" link="#1E2580">
+<table width="100%" height="40" cellpadding="0" cellspacing="0" border="0" bgcolor="#1E2580">
+  <tr valign="top"> 
+    <td><div align="left">
+        <h1 class="dropshad"><font color="#FFFFFF" size="5" face="Arial Black"><em>
+          &nbsp;&nbsp;<br>
+          <span class="dropshad">&nbsp;</span>
+	</font><font size="4" face="Arial, Helvetica, sans-serif"><%templ tag(site_title2) %></font><font size="4" face="Arial, Helvetica, sans-serif"><br>
+          </font></em></font></h1>
+      </div></td>
+    <td><div align="right"> 
+        <p><font color="#FFFFFF"><br>
+          <br>
+	<%templ tag(box_search) %>
+          <br>
+          <br>
+          </font></p>
+        </div></td>
+  </tr>
+</table>
+<table width="100%" height="5" cellpadding="0" cellspacing="0" border="0" bgcolor="#8784C6"><tr valign="top"><td class="topbar2">&nbsp;</td></tr></table>
+<table width="100%" cellpadding="0" cellspacing="10" border="0">
+	<tr valign="top"> 
+    <td width="100%">
+			<DIV STYLE="border: 1px solid black;"><%templ tag(site_location) %></DIV>
+			<table width="100%" cellpadding="10" cellspacing="0" bgcolor="#E9E9F8" bordercolor="#8784C6">  
+				
+        <tr valign="top"> 
+          <td bordercolor="#E9E9F8">
+              <br>
+              <br>
+		<%templ tag(content) %>
+              <BR>
+              <BR>
+            </p>
+            </td>
+				</tr>
+			</table>
+      <br>
+	</td>
+		<td width="170" bordercolor="#8784C6"> <table width="170" bgcolor="#E9E9F8" cellpadding="0" cellspacing="0" border="0">
+        <tr valign="top"> 
+          <td bordercolor="#E9E9F8"> <table width="170" bgcolor="#C1C1E8" cellpadding="0" cellspacing="0" bordercolor="#8784C6" border="1">
+              <tr valign="top">
+                <td height="17" bordercolor="#C1C1E8"><div align="center" class="topbar2"><span class="topbar"><strong>
+                    NAVIGATION</strong></span></div></td>
+              </tr>
+            </table>
+            <table width="100%" cellpadding="8" cellspacing="0" border="0">
+              <tr valign="top">
+                <td> <table width="100%" border="0">
+			<%templ tag(box_index) %>
+                  </table>
+                  </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+      <BR> <table width="170" bgcolor="#E9E9F8" cellpadding="0" cellspacing="0" border="0">
+        <tr valign="top"> 
+          <td bordercolor="#E9E9F8"> <table width="170" bgcolor="#C1C1E8" cellpadding="0" cellspacing="0" bordercolor="#8784C6" border="1">
+              <tr valign="top">
+                <td bordercolor="#C1C1E8" class="topbar2"><div align="center" class="topbar"><strong>LINKS</strong></div></td>
+              </tr>
+            </table>
+            <table width="100%" cellpadding="8" cellspacing="0" border="0">
+              <tr valign="top">
+                <td> <table width="100%" border="0">
+			<%templ tag(box_links) %>
+                  </table>
+                </td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+
+    </td>	
+	</tr>
+</table>
+<table width="100%" border="0">
+  <tr>
+    <td bgcolor="#8784C6"><div align="center" class="topbar"><strong>&copy; <%templ tag(site_url) %></strong></div></td>
+  </tr>
+</table>
+</body>
+<center><%templ tag(site_footer) %></center>
+</html>

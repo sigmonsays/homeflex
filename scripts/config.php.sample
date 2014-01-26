@@ -1,0 +1,130 @@
+<?
+	// while debugging set this to E_ALL, otherwise once you get up and runing, it's safe to set it to E_NONE
+	error_reporting(E_NONE);
+
+	// Enter in the URL to your site, eg: http://mydomain.com
+	// this is used for crontab's since $_SERVER['HTTP_HOST'] isn't available
+	define("SERVER_URL", "");
+
+	// Point this to homeflex, eg /usr/local/apache/htdocs/homeflex
+	$localPath = $_SERVER['DOCUMENT_ROOT'] . "/homeflex";
+
+	// This should be fine
+	$urlPrefix = "http://" . $_SERVER['HTTP_HOST'] . "/show";
+
+	// Contact info
+	$contact['email'] = "you@yoursite.com";
+	$contact['aim'] = "";
+
+	// This is the default theme
+	define("DEFAULT_THEME", "droll");
+
+	// Site title goes in the titlebar <title> tag
+	$siteTitle = "";
+
+	// site title2 is the heading of the page
+	$siteTitle2 = $siteTitle;
+
+	// Url Prefix for images
+	define("IMAGES_URL_PREFIX", "/homeflex/images");
+
+	// Where to store project files (outside of a web accessable page)
+	define("FILES_DIRECTORY", "");
+
+	// path to ttf fonts
+	define("FONTS_TTF_LOCAL_PATH", "/usr/X11R6/lib/X11/fonts/truetype");
+
+	// Pictures directory, this should be fine
+	define("PICTURES_LOCAL_PATH", "$localPath/pictures");
+
+	// pictures url prefix, this should be fine if u didn't change the above define
+	define("PICTURES_URL_PREFIX", "/homeflex/pictures");
+
+	// Where to store chat archives
+	define("CHAT_DIRECTORY", "$localPath/chatArchive");
+
+	// where to store uploaded files
+	define("UPLOAD_DIRECTORY", "/archive/upload");
+	define("MAX_FILE_SIZE", 20971520);
+
+	define("MOVIE_COVER_URL_PREFIX", "/homeflex/movieCovers");
+	define("MOVIE_COVER_LOCAL_PATH", "$localPath/movieCovers");
+
+	// Database information
+	define("DB_TYPE", "mysql");		//Either postgre or mysql
+	define("DB_HOST", "localhost");
+	define("DB_USER", "root");
+	define("DB_PASS", "");
+	define("DB_DATABASE", "homeflex");
+
+	// session configuration
+	define("COOKIE_LIFE", 22896000);
+	define("COOKIE_PATH", "/");
+	define("COOKIE_DOMAIN", '.' . $_SERVER['HTTP_HOST']);
+
+	$bugStatus = array("OPEN", "CLOSED", "READ");
+
+	$imageTypes = array("(unknown)", "GIF", "JPG", "PNG", "SWF", "PSD",
+			"BMP", "TIFF (Intel)", "TIFF (Motorola)", "JPC", "JP2",
+			"JPX", "JB2", "SWC", "IFF");
+
+	$admins = array('127.0.0.1');
+
+	//session properties
+	ini_set("session.cookie_lifetime", COOKIE_LIFE);
+	ini_set("session.gc_maxlifetime", COOKIE_LIFE);
+	session_name("loginID");
+
+	$includeLevel = 0;
+
+	$dbTables = array(
+		'mimetypes' => "mimetypes",
+		'news' => "news",
+		'fileCategories' => "fileCategories",
+		'files' => "files",
+		'movies' => "movies",
+		'pictureCategories' => "pictureCategories",
+		'pictures' => "pictures",
+		'projectCategories' => "projectCategories",
+		'projects' => "projects",
+		'users' => "users",
+		'bugs' => "bugs",
+		'preferences' => "preferences",
+		'skins' => "skins",
+		'links' => "links",
+		'sections' => "sections",
+		'cotd' => "cotd",
+		'todo' => "todo",
+		'changelog' => "changelog",
+		'badlinks' => "badlinks",
+		'services' => "services",
+		'loadavg' => "loadavg",
+		'bandwidth' => "bandwidth",
+		'countdown' => "countdown",
+		'services' => "services",
+		'blog' => "blog",
+		'blog-comments' => "blog-comments",
+		'blurb-box' => "blurbBar",
+		'announcements' => "announcements",
+		'fortunes' => "fortunes",
+		'levels' => "levels",
+		'mb_categories' => "mb_categories",
+		'mb_posts' => "mb_posts",
+		'faq' => "faq",
+		'faqCategories' => "faqCategories",
+		'images' => "images"
+	);
+
+	$admin_ip = 0;
+	$c = count($admins);
+	for($i=0; $i<$c; $i++) {
+		if (ereg("^" . $admins[$i], $_SERVER['REMOTE_ADDR']) ) {
+			$admin_ip = 1;
+			break;
+		}
+	}
+
+// uncomment this to show you've passed the config file test...
+//	define("VALID", 1);
+
+?>

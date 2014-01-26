@@ -1,0 +1,62 @@
+A module is a class that extends the features of the template class
+
+Have a look at an example of how a module is structured and functions...
+
+First off, the file name has to be [class_name].mod.php where class name is
+the name of the class! In this instance, it's mod_helloWorld.
+
+So this module file _HAS_ to be called, mod_hellWorld.mod.php
+
+File: mod_helloWorld.mod.php:
+<?
+class mod_helloWorld {
+      var $functions;	// this holds an array of the functions this module contains
+
+      /* constructor */
+      function mod_htmlProtect() {
+
+			/* simple constructor which sets what functions are used in this module */
+         $this->functions = array('myfunc1', 'myfunc2');
+      }
+
+
+		/* this function must exist, it returns the array of functions available in this module */
+      function getFunctions() {
+         return $this->functions;
+      }
+
+
+		/* these are the functions, myfunc1 & myfunc2 */
+      function myfunc1() {
+         return "Hello World (1)";
+      }
+
+      function myfunc2() {
+         return "Hello World (2)";
+      }
+
+}
+?>
+
+
+To actually use this module, one would use code like the following:
+
+The module function behaves exactly like all the other built-in functions.
+
+Built-in functions take priority over module functions, so be sure not
+to register a function with the same name as a builtin.
+
+<?
+	$template = new template()
+
+	$template->loadModule("mod_helloWorld.mod.php");
+
+$stuff = <<<EOF
+<%templ myfunc1() %>
+<%templ myfunc2() %>
+EOF
+
+	$template->loadTemplateFromString($stuff);
+
+	$template->parseTemplate();
+?>

@@ -1,0 +1,51 @@
+<STYLE>
+/******************/
+/* Base Styles */
+/******************/
+
+
+div,body,td,th,p,font,li,ul,dt,dd,dl,form,blockquote,tr,table
+   {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-size: 10pt;
+   color: #FFFFFF;
+   line-height: 11pt
+   }
+
+BODY { 
+	color: #000000; 
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+  	font-size: 12pt;
+        background-color: #000000; 
+        height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+        scrollbar-arrow-color: #FF9900; scrollbar-base-color: #333333; scrollbar-dark-shadow-color: #000000; scrollbar-track-color: #999999
+
+}
+A, A:link, A:visited { text-decoration: none; font-size: 8pt; color: #FF9900; font-weight: bold; }
+A:hover { color: #FF9900; background-color: #222222; text-decoration: underline; cursor:hand; }
+.overviewtoptext { font-size: 8pt; line-height: 10pt; font-weight: bold; letter-spacing: 1px; text-align: justify}
+
+.formheader { font-size: 12pt; color: #333333; font-weight: bold; }
+.formheader2 { font-size: 12pt; color: #FF9900; font-weight: bold; }
+.rightborder { BORDER-RIGHT: #FF9900 1px solid }
+.borderme { BORDER-BOTTOM: #FF9900 1px solid; BORDER-LEFT: #FF9900 1px solid; BORDER-RIGHT: #FF9900 1px solid; BORDER-TOP: #FF9900 1px solid }
+.bullet { font-size: 5pt; font-family: wingdings; color: #FF9900; font-weight: bold; }
+.Button { BACKGROUND-COLOR: #222222; BORDER-BOTTOM: #666677 1px solid; BORDER-LEFT: #666677 1px solid; BORDER-RIGHT: #666677 1px solid; BORDER-TOP: #666677 1px solid; COLOR: #FF9900; CURSOR: hand; font-family: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px;  scrollbar-arrow-color: #FF9900; scrollbar-base-color: #333333; scrollbar-dark-shadow-color: #000000; scrollbar-track-color: #999999;  font-weight: bold;}
+.input { BACKGROUND-COLOR: #222222;  border:1 solid #666677; COLOR: #FF9900; CURSOR: hand; font-family: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px;  scrollbar-arrow-color: #FF9900; scrollbar-base-color: #333333; scrollbar-dark-shadow-color: #000000; scrollbar-track-color: #999999}
+.hometext {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; color: #666677}
+.hometextsmall {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px; color: #888899}
+.form {CURSOR: hand; FONT-FAMILY: verdana, arial, helvetica; FONT-SIZE: 9px; scrollbar-arrow-color: #FF9900; scrollbar-base-color: #333333; scrollbar-dark-shadow-color: #000000; scrollbar-track-color: #999999; COLOR: #ff9900;  }
+.bottomline { BORDER-BOTTOM: #ff9900 1px solid; font-family: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 10px; }
+.Search  { width=126px; BACKGROUND-COLOR: #222222; BORDER-BOTTOM: #666677 1px solid; BORDER-LEFT: #666677 1px solid; BORDER-RIGHT: #666677 1px solid; BORDER-TOP: #666677 1px solid; COLOR: #FF9900; CURSOR: hand; font-family: Verdana, Arial, Helvetica, sans-serif; FONT-SIZE: 9px; ; line-height: 9px}
+
+.borderme { BORDER-BOTTOM: #444444 1px solid; BORDER-LEFT: #444444 1px solid; BORDER-RIGHT: #444444 1px solid; BORDER-TOP: #444444 1px solid }
+.popupbodytext { font-size: 8pt; color: #A4A4A4; text-align: justify}
+.popupheadertext { font-size: 8pt; color: #A4A4A4; font-weight: bold; text-align: justify; font-variant: small-caps}
+
+.leftNavBull { COLOR: #666677; FONT-FAMILY: verdana; FONT-SIZE: 8pt; LINE-HEIGHT: 10pt}
+li { FONT-FAMILY: verdana; FONT-SIZE: 8pt;}
+
+</STYLE>

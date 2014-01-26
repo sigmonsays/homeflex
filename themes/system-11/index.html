@@ -1,0 +1,160 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+<meta http-equiv='Pragma' content='no-cache' />
+<HTML>
+<HEAD>
+<STYLE>
+<!--
+
+a { color: #006699; text-decoration : none; border-bottom :  1px none; }
+a:link { text-decoration : none; border-bottom :  1px dashed; }
+a:visited { text-decoration : none; border-bottom :  1px dashed; }
+a:hover { text-decoration : none; border-bottom :  1px solid; }
+
+
+a.normal:link { text-decoration : none; border-bottom : 0px dashed; }
+a.normal:visited {text-decoration : none; border-bottom : 0px dashed;}  
+a.normal:hover { text-decoration : none; border-bottom :  0px solid; }
+
+
+.headerMenu { font-size: 10pt; font-family: Verdana; color: #000000; font-weight: bold; }
+.headerMenu:hover { font-size: 10pt; font-family: Verdana; color: red; font-weight: bold; }
+.extra { font-size: 10pt; font-family: Verdana; text-decoration: none; color: darkred; }
+.menuItem { font-size: 10pt; font-family: Verdana; color: #EEFC07; text-decoration: none; font-weight: bold;}
+.menuItem:hover { font-size: 10pt; font-family: Verdana; color: #EEFC07; text-decoration: underline; font-weight: bold;}
+.extraFlyer { font-size: 10pt; font-family: Verdana; color: #540A14; text-decoration: none; font-weight: bold;}
+.extraFlyer:hover { font-size: 10pt; font-family: Verdana; color: #FA0C2D; text-decoration: underline; font-weight: bold;}
+.messagesTitle { font-size: 100%; font-family: Verdana; color: #000000; font-weight: bold;}
+.error { font-family: Verdana; font-size: 10pt; color: red; } 
+.na { font-family: Verdana; font-size: 10pt; color: red; font-weight: bold; }
+.stats { font-family: Verdana; font-size: 10pt; color: #3885E5; font-weight: bold; }
+.statsNet { font-family: Verdana; font-size: 10pt; color: green; font-weight: bold; }
+.totals { font-family: Verdana; font-size: 10pt; color: #3885E5; font-weight: bold; }
+.debbie { font-family: Verdana; font-size: 14pt; color: #000000; font-weight: bold; }
+.yasp_years { font-family: Verdana; font-size: 10pt; color: #000000; font-weight: bold; }
+.yasp_active { font-family: Verdana; font-size: 10pt; color: navy; font-weight: bold; }
+.yasp_added { font-family: Verdana; font-size: 10pt; color: #3885E5; font-weight: bold; }
+.yasp_cancelled { font-family: Verdana; font-size: 10pt; color: red; font-weight: bold; }
+.yasp_blocked { font-family: Verdana; font-size: 10pt; color: #540A14; font-weight: bold; }
+.yasp_running_net { font-family: Verdana; font-size: 10pt; color: navy; font-weight: bold; }
+
+
+/****************************************************************************/
+/* Menu Fonts Here */
+
+#mainMenu td.title {
+	font-family:		Arial, Verdana, Helvetica, sans-serif;
+	font-size:		80%;
+	font-weight:		bold;
+}
+#mainMenu a.leftmenu:link, #mainMenu a.leftmenu:visited, #mainMenu a.leftmenu:hover {
+	font-family:		Arial, Verdana, Helvetica, sans-serif;
+	font-size:		70%;
+}
+
+/****************************************************************************/
+#mainMenu {
+	font-family:		Verdana, Arial, Helvetica, sans-serif;
+	width:			100%;
+	background-color:	#0e3d7a;
+	border:			0px solid navy;
+	margin-bottom:		0.5em;
+}
+
+#mainMenu td.title {
+	background-image:	url(/homeflex/themes/<%templ tag(siteTheme) %>/_files/cell1l.jpg);
+	color:			#000000;
+	text-align:		center;
+	border:			0px solid navy;
+}
+
+#mainMenu tr {
+	background-color:	#f2f2f2;
+	border:			0px solid navy;
+}
+
+#mainMenu a.leftmenu { padding-left: 3px; }
+
+#mainMenu a.leftmenu:link, #mainMenu a.leftmenu:visited {
+	background-color:	#f2f2f2;
+	color:			#000000;
+	border:			0px solid navy;
+}
+
+#mainMenu a.leftmenu:hover {
+	background-image:	url(/homeflex/themes/<%templ tag(siteTheme) %>/_files/cell2l.jpg);
+	color:			#000000;
+	border:			0px solid navy;
+	font-weight:		bold;
+}
+
+#mainMenu a.leftmenu:hover, #mainMenu a.leftmenu:link {
+        display:		block;
+        padding:		3px;
+}
+
+input {
+	text-indent:		2px;
+}
+
+-->
+</STYLE>
+
+<%templ tag(head) %>
+<TITLE><%templ tag(site_title) %></TITLE>
+
+</HEAD>
+<BODY  BGCOLOR="#FFFFFF">
+
+<!-- main friggin table -->
+
+<TABLE WIDTH="98%" BORDER=0 ALIGN="CENTER">
+<TR>
+
+<TD WIDTH="15%">
+
+<FORM ACTION="http://www.google.com/search" METHOd="get">
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=0 CELLSPACING=0>
+	<TR>
+		<TD ALIGN=left VALIGN=bottom WIDTH=25%>
+			<INPUT TYPE="text" NAME="q" SIZE=15>
+			<INPUT TYPe="submit" VALUE="Search">
+		</TD>
+	</TR>
+</TABLE>
+</FORM>
+
+<TABLE WIDTH='100%' BORDER='0' CELLPADDING='3' CELLSPACING='0'>
+	<TR>
+		<td width='170' valign='top'>
+					<table id='mainMenu' cellpadding='0' cellspacing='1'>
+						<tr><td class='title'>..:: Index ::..</td></tr>
+						<%templ tag(box_index) %>
+					</table>
+
+					<table id='mainMenu' cellpadding='0' cellspacing='1'>
+						<tr><td class='title'>..:: Links ::..</td></tr>
+						<%templ tag(box_links) %>
+					</table>
+		</td>
+	</TR>
+</TABLE>
+
+</TD>
+
+<TD WIDTH="85%" VALIGN="top">
+
+		<table width='100%' cellpadding='2' cellspacing='1' align='center'>
+			<tr><td class='title' colspan='2'>..:: <%templ tag(site_location) %> ::..</td></tr>
+	
+				<tr class='stripe1'>
+					<td>
+						<%templ tag(content) %>
+					</td>
+				</tr>
+		</table>
+</TD>
+</TR>
+</TABLE>
+<BR><BR>
+<center><%templ tag(site_footer) %></center>
